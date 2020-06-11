@@ -32,10 +32,17 @@ async def on_message(message):
     if message.content.startswith('$hello'):
         await message.channel.send('Hello!')
 
+# This command will create a party oject with the caller as the owner
 @bot.command()
 async def cParty(ctx, pSize:int ,*, name:str):
     await ctx.send("Creating party of: size = " + str(pSize) + ", Name = " + name + ",Owner = " + ctx.author)
     partyList.append(Party(pSize, name, ctx.author))
+    author = ctx.message.author
+    await client.create_role(author.server, name="role name")
+
+# Command to invite members of the 'guild' to the party
+@bot.command()
+async def cParty(ctx):
 
 
-bot.run('NzE4MjE1NzQ5OTEwMzk2OTYw.XuFvNg.dr5iTG0idYopbIB4GsE6smc64us')
+bot.run('')

@@ -402,329 +402,394 @@
 2020-06-11 11:53:06,575:DEBUG:discord.client: Dispatching event socket_raw_receive
 2020-06-11 11:53:06,575:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
 2020-06-11 11:53:06,575:DEBUG:discord.client: Dispatching event socket_response
-Dispatching event socket_raw_send
-2020-06-11 11:52:06,613:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:52:06,613:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:52:06,613:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:52:47,687:DEBUG:discord.gateway: Keeping websocket alive with sequence 15.
-2020-06-11 11:52:47,687:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:52:47,801:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:52:47,801:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:52:47,801:DEBUG:discord.client: Dispatching event socket_response
-t_raw_send
-2020-06-11 11:49:25,177:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:49:25,177:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:49:25,177:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:50:06,305:DEBUG:discord.gateway: Keeping websocket alive with sequence 17.
-2020-06-11 11:50:06,305:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:50:06,417:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:50:06,417:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:50:06,417:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:50:36,085:INFO:discord.gateway: Websocket closed with 1001 (), attempting a reconnect.
-2020-06-11 11:50:36,086:INFO:discord.client: Got a request to RESUME the websocket.
-2020-06-11 11:50:36,086:DEBUG:discord.client: Dispatching event disconnect
-2020-06-11 11:50:36,170:DEBUG:discord.http: GET https://discordapp.com/api/v7/gateway with None has returned 200
-2020-06-11 11:50:36,170:DEBUG:discord.http: GET https://discordapp.com/api/v7/gateway has received {'url': 'wss://gateway.discord.gg'}
-2020-06-11 11:50:36,477:INFO:discord.gateway: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6&compress=zlib-stream
-2020-06-11 11:50:36,477:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:50:36,477:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 10, 'd': {'heartbeat_interval': 41250, '_trace': ['["gateway-prd-main-bhvf",{"micros":0.0}]']}}
-2020-06-11 11:50:36,477:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:50:36,477:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:50:36,478:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:50:36,478:INFO:discord.gateway: Shard ID None has sent the RESUME payload.
-2020-06-11 11:50:36,587:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:50:36,588:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:50:36,588:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:50:36,620:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:50:36,620:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'RESUMED', 's': 18, 'op': 0, 'd': {'_trace': ['["gateway-prd-main-bhvf",{"micros":3474,"calls":["discord-sessions-prd-1-63",{"micros":18}]}]']}}
-2020-06-11 11:50:36,620:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:50:36,620:INFO:discord.gateway: Shard ID None has successfully RESUMED session 0e6f3262f71ccac4ce5a7668b9a5f1ba under trace ["gateway-prd-main-bhvf",{"micros":3474,"calls":["discord-sessions-prd-1-63",{"micros":18}]}].
-2020-06-11 11:50:36,620:DEBUG:discord.client: Dispatching event resumed
-2020-06-11 11:50:47,555:DEBUG:discord.gateway: Keeping websocket alive with sequence 17.
-2020-06-11 11:50:47,555:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:51:17,728:DEBUG:discord.gateway: Keeping websocket alive with sequence 18.
-2020-06-11 11:51:17,728:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:51:17,829:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:51:17,830:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:51:17,830:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:51:28,806:WARNING:discord.gateway: Shard ID None has stopped responding to the gateway. Closing and restarting.
-2020-06-11 11:51:58,978:DEBUG:discord.gateway: Keeping websocket alive with sequence 18.
-2020-06-11 11:51:58,978:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:51:59,087:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:51:59,088:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:51:59,088:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:52:40,228:DEBUG:discord.gateway: Keeping websocket alive with sequence 18.
-2020-06-11 11:52:40,228:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:52:40,343:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:52:40,343:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:52:40,343:DEBUG:discord.client: Dispatching event socket_response
-G:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:43:30,882:DEBUG:discord.gateway: Keeping websocket alive with sequence 23.
-2020-06-11 11:43:30,882:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:43:30,998:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:43:30,998:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:43:30,998:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:43:48,023:WARNING:discord.gateway: Shard ID None has stopped responding to the gateway. Closing and restarting.
-2020-06-11 11:44:12,133:DEBUG:discord.gateway: Keeping websocket alive with sequence 23.
-2020-06-11 11:44:12,133:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:44:12,239:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:44:12,239:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:44:12,240:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:44:53,384:DEBUG:discord.gateway: Keeping websocket alive with sequence 23.
-2020-06-11 11:44:53,384:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:44:53,490:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:44:53,490:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:44:53,490:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:45:34,635:DEBUG:discord.gateway: Keeping websocket alive with sequence 23.
-2020-06-11 11:45:34,635:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:45:34,744:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:45:34,745:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:45:34,745:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:46:15,885:DEBUG:discord.gateway: Keeping websocket alive with sequence 23.
-2020-06-11 11:46:15,885:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:46:15,992:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:46:15,992:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:46:15,992:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:46:57,136:DEBUG:discord.gateway: Keeping websocket alive with sequence 23.
-2020-06-11 11:46:57,136:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:46:57,252:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:46:57,253:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:46:57,253:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:47:38,386:DEBUG:discord.gateway: Keeping websocket alive with sequence 23.
-2020-06-11 11:47:38,386:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:47:39,169:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:47:39,169:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:47:39,169:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:48:19,637:DEBUG:discord.gateway: Keeping websocket alive with sequence 23.
-2020-06-11 11:48:19,637:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:48:20,002:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:48:20,002:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:48:20,002:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:49:00,888:DEBUG:discord.gateway: Keeping websocket alive with sequence 23.
-2020-06-11 11:49:00,888:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:49:00,997:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:49:00,997:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:49:00,997:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:49:42,139:DEBUG:discord.gateway: Keeping websocket alive with sequence 23.
-2020-06-11 11:49:42,139:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:49:42,241:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:49:42,241:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:49:42,241:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:50:23,389:DEBUG:discord.gateway: Keeping websocket alive with sequence 23.
-2020-06-11 11:50:23,389:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:50:23,503:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:50:23,503:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:50:23,504:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:51:04,640:DEBUG:discord.gateway: Keeping websocket alive with sequence 23.
-2020-06-11 11:51:04,640:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:51:04,750:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:51:04,750:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:51:04,750:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:51:45,891:DEBUG:discord.gateway: Keeping websocket alive with sequence 23.
-2020-06-11 11:51:45,891:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:51:46,004:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:51:46,004:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:51:46,004:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:52:27,142:DEBUG:discord.gateway: Keeping websocket alive with sequence 23.
-2020-06-11 11:52:27,142:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:52:27,254:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:52:27,254:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:52:27,254:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:53:08,392:DEBUG:discord.gateway: Keeping websocket alive with sequence 23.
-2020-06-11 11:53:08,392:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:53:08,505:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:53:08,505:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:53:08,505:DEBUG:discord.client: Dispatching event socket_response
-.
-2020-06-11 11:53:06,628:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:53:06,733:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:53:06,733:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:53:06,733:DEBUG:discord.client: Dispatching event socket_response
--11 11:36:29,645:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:36:29,645:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:37:10,787:DEBUG:discord.gateway: Keeping websocket alive with sequence 32.
-2020-06-11 11:37:10,787:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:37:10,892:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:37:10,892:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:37:10,892:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:37:52,037:DEBUG:discord.gateway: Keeping websocket alive with sequence 32.
-2020-06-11 11:37:52,037:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:37:52,142:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:37:52,143:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:37:52,143:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:38:33,288:DEBUG:discord.gateway: Keeping websocket alive with sequence 32.
-2020-06-11 11:38:33,288:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:38:33,399:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:38:33,400:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:38:33,400:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:39:14,539:DEBUG:discord.gateway: Keeping websocket alive with sequence 32.
-2020-06-11 11:39:14,539:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:39:14,650:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:39:14,651:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:39:14,651:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:39:55,789:DEBUG:discord.gateway: Keeping websocket alive with sequence 32.
-2020-06-11 11:39:55,789:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:39:55,903:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:39:55,903:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:39:55,903:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:40:37,040:DEBUG:discord.gateway: Keeping websocket alive with sequence 32.
-2020-06-11 11:40:37,040:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:40:37,154:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:40:37,154:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:40:37,154:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:41:18,291:DEBUG:discord.gateway: Keeping websocket alive with sequence 32.
-2020-06-11 11:41:18,291:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:41:18,395:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:41:18,395:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:41:18,396:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:41:59,541:DEBUG:discord.gateway: Keeping websocket alive with sequence 32.
-2020-06-11 11:41:59,541:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:41:59,657:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:41:59,657:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:41:59,657:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:42:40,792:DEBUG:discord.gateway: Keeping websocket alive with sequence 32.
-2020-06-11 11:42:40,792:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:42:40,902:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:42:40,902:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:42:40,902:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:43:22,042:DEBUG:discord.gateway: Keeping websocket alive with sequence 32.
-2020-06-11 11:43:22,042:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:43:22,143:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:43:22,143:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:43:22,143:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:44:03,293:DEBUG:discord.gateway: Keeping websocket alive with sequence 32.
-2020-06-11 11:44:03,293:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:44:03,394:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:44:03,394:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:44:03,394:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:44:44,544:DEBUG:discord.gateway: Keeping websocket alive with sequence 32.
-2020-06-11 11:44:44,544:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:44:44,678:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:44:44,678:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:44:44,678:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:45:25,795:DEBUG:discord.gateway: Keeping websocket alive with sequence 32.
-2020-06-11 11:45:25,795:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:45:25,946:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:45:25,946:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:45:25,946:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:46:07,046:DEBUG:discord.gateway: Keeping websocket alive with sequence 32.
-2020-06-11 11:46:07,046:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:46:07,161:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:46:07,162:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:46:07,162:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:46:48,297:DEBUG:discord.gateway: Keeping websocket alive with sequence 32.
-2020-06-11 11:46:48,297:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:46:48,406:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:46:48,406:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:46:48,406:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:47:29,547:DEBUG:discord.gateway: Keeping websocket alive with sequence 32.
-2020-06-11 11:47:29,547:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:47:31,023:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:47:31,024:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:47:31,024:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:48:10,798:DEBUG:discord.gateway: Keeping websocket alive with sequence 32.
-2020-06-11 11:48:10,798:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:48:12,407:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:48:12,407:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:48:12,407:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:48:52,048:DEBUG:discord.gateway: Keeping websocket alive with sequence 32.
-2020-06-11 11:48:52,048:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:48:52,162:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:48:52,162:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:48:52,162:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:49:33,299:DEBUG:discord.gateway: Keeping websocket alive with sequence 32.
-2020-06-11 11:49:33,299:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:49:33,614:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:49:33,614:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:49:33,614:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:50:14,549:DEBUG:discord.gateway: Keeping websocket alive with sequence 32.
-2020-06-11 11:50:14,549:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:50:14,659:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:50:14,660:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:50:14,660:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:50:55,800:DEBUG:discord.gateway: Keeping websocket alive with sequence 32.
-2020-06-11 11:50:55,800:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:50:55,933:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:50:55,933:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:50:55,933:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:51:37,050:DEBUG:discord.gateway: Keeping websocket alive with sequence 32.
-2020-06-11 11:51:37,050:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:51:37,159:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:51:37,159:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:51:37,159:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:52:18,301:DEBUG:discord.gateway: Keeping websocket alive with sequence 32.
-2020-06-11 11:52:18,301:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:52:18,409:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:52:18,410:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:52:18,410:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:52:59,551:DEBUG:discord.gateway: Keeping websocket alive with sequence 32.
-2020-06-11 11:52:59,551:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:52:59,663:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:52:59,663:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:52:59,663:DEBUG:discord.client: Dispatching event socket_response
-Dispatching event socket_response
-2020-06-11 11:44:52,861:DEBUG:discord.gateway: Keeping websocket alive with sequence 38.
-2020-06-11 11:44:52,861:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:44:52,976:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:44:52,976:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:44:52,976:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:45:34,112:DEBUG:discord.gateway: Keeping websocket alive with sequence 38.
-2020-06-11 11:45:34,112:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:45:34,230:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:45:34,230:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:45:34,231:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:46:15,362:DEBUG:discord.gateway: Keeping websocket alive with sequence 38.
-2020-06-11 11:46:15,362:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:46:15,483:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:46:15,483:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:46:15,483:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:46:56,613:DEBUG:discord.gateway: Keeping websocket alive with sequence 38.
-2020-06-11 11:46:56,613:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:46:56,723:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:46:56,723:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:46:56,723:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:47:37,864:DEBUG:discord.gateway: Keeping websocket alive with sequence 38.
-2020-06-11 11:47:37,864:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:47:38,687:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:47:38,688:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:47:38,688:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:48:19,114:DEBUG:discord.gateway: Keeping websocket alive with sequence 38.
-2020-06-11 11:48:19,114:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:48:27,234:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:48:27,235:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:48:27,235:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:49:00,366:DEBUG:discord.gateway: Keeping websocket alive with sequence 38.
-2020-06-11 11:49:00,366:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:49:00,485:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:49:00,485:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:49:00,485:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:49:41,616:DEBUG:discord.gateway: Keeping websocket alive with sequence 38.
-2020-06-11 11:49:41,616:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:49:41,721:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:49:41,721:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:49:41,721:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:50:22,867:DEBUG:discord.gateway: Keeping websocket alive with sequence 38.
-2020-06-11 11:50:22,867:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:50:22,982:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:50:22,982:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:50:22,982:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:51:04,118:DEBUG:discord.gateway: Keeping websocket alive with sequence 38.
-2020-06-11 11:51:04,118:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:51:04,225:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:51:04,225:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:51:04,225:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:51:45,369:DEBUG:discord.gateway: Keeping websocket alive with sequence 38.
-2020-06-11 11:51:45,369:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:51:45,474:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:51:45,474:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:51:45,474:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:52:26,619:DEBUG:discord.gateway: Keeping websocket alive with sequence 38.
-2020-06-11 11:52:26,619:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:52:26,723:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:52:26,723:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:52:26,723:DEBUG:discord.client: Dispatching event socket_response
-2020-06-11 11:53:07,870:DEBUG:discord.gateway: Keeping websocket alive with sequence 38.
-2020-06-11 11:53:07,870:DEBUG:discord.client: Dispatching event socket_raw_send
-2020-06-11 11:53:07,996:DEBUG:discord.client: Dispatching event socket_raw_receive
-2020-06-11 11:53:07,996:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-2020-06-11 11:53:07,996:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 11:53:47,708:DEBUG:discord.gateway: Keeping websocket alive with sequence 13.
+2020-06-11 11:53:47,708:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 11:53:47,822:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 11:53:47,822:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 11:53:47,822:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 11:53:58,352:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 11:53:58,352:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'PRESENCE_UPDATE', 's': 14, 'op': 0, 'd': {'user': {'id': '260913491706118145'}, 'status': 'idle', 'roles': ['706484808259338280', '699216280892473345', '570015187193692173'], 'premium_since': None, 'nick': None, 'guild_id': '435468279943790593', 'game': None, 'client_status': {'desktop': 'idle'}, 'activities': []}}
+2020-06-11 11:53:58,352:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 11:53:58,353:DEBUG:discord.client: Dispatching event member_update
+2020-06-11 11:54:28,959:DEBUG:discord.gateway: Keeping websocket alive with sequence 14.
+2020-06-11 11:54:28,959:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 11:54:29,067:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 11:54:29,067:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 11:54:29,067:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 11:55:10,209:DEBUG:discord.gateway: Keeping websocket alive with sequence 14.
+2020-06-11 11:55:10,209:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 11:55:10,321:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 11:55:10,321:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 11:55:10,321:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 11:55:51,460:DEBUG:discord.gateway: Keeping websocket alive with sequence 14.
+2020-06-11 11:55:51,460:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 11:55:51,591:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 11:55:51,591:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 11:55:51,591:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 11:56:32,711:DEBUG:discord.gateway: Keeping websocket alive with sequence 14.
+2020-06-11 11:56:32,711:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 11:56:32,823:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 11:56:32,824:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 11:56:32,824:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 11:57:13,961:DEBUG:discord.gateway: Keeping websocket alive with sequence 14.
+2020-06-11 11:57:13,961:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 11:57:14,103:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 11:57:14,103:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 11:57:14,103:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 11:57:55,212:DEBUG:discord.gateway: Keeping websocket alive with sequence 14.
+2020-06-11 11:57:55,212:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 11:57:55,321:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 11:57:55,321:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 11:57:55,321:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 11:58:36,463:DEBUG:discord.gateway: Keeping websocket alive with sequence 14.
+2020-06-11 11:58:36,463:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 11:58:36,575:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 11:58:36,575:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 11:58:36,575:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 11:59:17,714:DEBUG:discord.gateway: Keeping websocket alive with sequence 14.
+2020-06-11 11:59:17,714:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 11:59:17,828:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 11:59:17,828:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 11:59:17,828:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 11:59:58,965:DEBUG:discord.gateway: Keeping websocket alive with sequence 14.
+2020-06-11 11:59:58,965:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 11:59:59,083:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 11:59:59,083:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 11:59:59,084:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:00:40,215:DEBUG:discord.gateway: Keeping websocket alive with sequence 14.
+2020-06-11 12:00:40,215:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:00:40,328:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:00:40,328:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 12:00:40,329:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:00:40,358:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:00:40,359:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'PRESENCE_UPDATE', 's': 15, 'op': 0, 'd': {'user': {'id': '260913491706118145'}, 'status': 'online', 'roles': ['706484808259338280', '699216280892473345', '570015187193692173'], 'premium_since': None, 'nick': None, 'guild_id': '435468279943790593', 'game': None, 'client_status': {'desktop': 'online'}, 'activities': []}}
+2020-06-11 12:00:40,359:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:00:40,359:DEBUG:discord.client: Dispatching event member_update
+2020-06-11 12:01:21,466:DEBUG:discord.gateway: Keeping websocket alive with sequence 15.
+2020-06-11 12:01:21,466:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:01:21,590:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:01:21,590:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 12:01:21,590:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:02:02,717:DEBUG:discord.gateway: Keeping websocket alive with sequence 15.
+2020-06-11 12:02:02,717:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:02:02,837:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:02:02,837:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 12:02:02,837:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:02:43,967:DEBUG:discord.gateway: Keeping websocket alive with sequence 15.
+2020-06-11 12:02:43,967:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:02:44,110:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:02:44,110:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 12:02:44,110:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:02:51,817:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:02:51,817:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'TYPING_START', 's': 16, 'op': 0, 'd': {'user_id': '260913491706118145', 'timestamp': 1591873348, 'member': {'user': {'username': 'Hamster', 'id': '260913491706118145', 'discriminator': '2673', 'avatar': 'b792cd7dc067f413a017810790483aae'}, 'roles': ['706484808259338280', '699216280892473345', '570015187193692173'], 'premium_since': None, 'nick': None, 'mute': False, 'joined_at': '2018-06-06T18:26:19.487000+00:00', 'hoisted_role': None, 'deaf': False}, 'channel_id': '435468280384454667', 'guild_id': '435468279943790593'}}
+2020-06-11 12:02:51,817:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:02:51,818:DEBUG:discord.client: Dispatching event typing
+2020-06-11 12:03:00,019:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:03:00,019:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'TYPING_START', 's': 17, 'op': 0, 'd': {'user_id': '260913491706118145', 'timestamp': 1591873357, 'member': {'user': {'username': 'Hamster', 'id': '260913491706118145', 'discriminator': '2673', 'avatar': 'b792cd7dc067f413a017810790483aae'}, 'roles': ['706484808259338280', '699216280892473345', '570015187193692173'], 'premium_since': None, 'nick': None, 'mute': False, 'joined_at': '2018-06-06T18:26:19.487000+00:00', 'hoisted_role': None, 'deaf': False}, 'channel_id': '435468280384454667', 'guild_id': '435468279943790593'}}
+2020-06-11 12:03:00,019:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:03:00,019:DEBUG:discord.client: Dispatching event typing
+2020-06-11 12:03:06,932:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:03:06,932:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 18, 'op': 0, 'd': {'type': 0, 'tts': False, 'timestamp': '2020-06-11T11:02:43.993000+00:00', 'pinned': False, 'nonce': '720593854243274752', 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'member': {'roles': ['706484808259338280', '699216280892473345', '570015187193692173'], 'premium_since': None, 'nick': None, 'mute': False, 'joined_at': '2018-06-06T18:26:19.487000+00:00', 'hoisted_role': None, 'deaf': False}, 'id': '720593859087958067', 'flags': 0, 'embeds': [], 'edited_timestamp': None, 'content': 'a bot that asks availibilty for dnd?', 'channel_id': '435468280384454667', 'author': {'username': 'Hamster', 'public_flags': 0, 'id': '260913491706118145', 'discriminator': '2673', 'avatar': 'b792cd7dc067f413a017810790483aae'}, 'attachments': [], 'guild_id': '435468279943790593'}}
+2020-06-11 12:03:06,932:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:03:06,933:DEBUG:discord.client: Dispatching event message
+2020-06-11 12:03:25,218:DEBUG:discord.gateway: Keeping websocket alive with sequence 18.
+2020-06-11 12:03:25,218:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:03:25,346:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:03:25,346:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 12:03:25,347:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:04:06,468:DEBUG:discord.gateway: Keeping websocket alive with sequence 18.
+2020-06-11 12:04:06,468:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:04:06,617:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:04:06,617:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 12:04:06,617:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:04:26,447:INFO:discord.gateway: Websocket closed with 4003 (Not authenticated.), attempting a reconnect.
+2020-06-11 12:04:26,448:INFO:discord.client: Got a request to RESUME the websocket.
+2020-06-11 12:04:26,448:DEBUG:discord.client: Dispatching event disconnect
+2020-06-11 12:04:26,625:DEBUG:discord.http: GET https://discordapp.com/api/v7/gateway with None has returned 200
+2020-06-11 12:04:26,625:DEBUG:discord.http: GET https://discordapp.com/api/v7/gateway has received {'url': 'wss://gateway.discord.gg'}
+2020-06-11 12:04:26,924:INFO:discord.gateway: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6&compress=zlib-stream
+2020-06-11 12:04:26,924:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:04:26,925:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 10, 'd': {'heartbeat_interval': 41250, '_trace': ['["gateway-prd-main-wmcn",{"micros":0.0}]']}}
+2020-06-11 12:04:26,925:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:04:26,925:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:04:26,926:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:04:26,926:INFO:discord.gateway: Shard ID None has sent the RESUME payload.
+2020-06-11 12:04:27,034:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:04:27,034:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 12:04:27,034:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:04:27,051:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:04:27,052:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 9, 'd': False}
+2020-06-11 12:04:27,052:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:04:27,052:INFO:discord.gateway: Shard ID None session has been invalidated.
+2020-06-11 12:04:32,053:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:04:32,053:INFO:discord.gateway: Shard ID None has sent the IDENTIFY payload.
+2020-06-11 12:04:32,179:INFO:discord.gateway: Websocket closed with 4004 (Authentication failed.), cannot reconnect.
+2020-06-11 12:04:32,179:DEBUG:discord.client: Dispatching event disconnect
+2020-06-11 12:04:32,180:INFO:discord.client: Cleaning up tasks.
+2020-06-11 12:04:32,180:INFO:discord.client: Closing the event loop.
+ 12:04:27,043:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 9, 'd': False}
+2020-06-11 12:04:27,043:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:04:27,043:INFO:discord.gateway: Shard ID None session has been invalidated.
+2020-06-11 12:04:28,949:DEBUG:discord.gateway: Keeping websocket alive with sequence 20.
+2020-06-11 12:04:28,949:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:04:32,043:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:04:32,043:INFO:discord.gateway: Shard ID None has sent the IDENTIFY payload.
+2020-06-11 12:04:32,208:INFO:discord.gateway: Websocket closed with 4004 (Authentication failed.), cannot reconnect.
+2020-06-11 12:04:32,208:DEBUG:discord.client: Dispatching event disconnect
+2020-06-11 12:04:32,209:INFO:discord.client: Cleaning up tasks.
+2020-06-11 12:04:32,210:INFO:discord.client: Closing the event loop.
+dc067f413a017810790483aae'}, 'roles': ['706484808259338280', '699216280892473345', '570015187193692173'], 'premium_since': None, 'nick': None, 'mute': False, 'joined_at': '2018-06-06T18:26:19.487000+00:00', 'hoisted_role': None, 'deaf': False}, 'channel_id': '435468280384454667', 'guild_id': '435468279943790593'}}
+2020-06-11 12:03:00,021:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:03:00,021:DEBUG:discord.client: Dispatching event typing
+2020-06-11 12:03:06,933:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:03:06,934:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 23, 'op': 0, 'd': {'type': 0, 'tts': False, 'timestamp': '2020-06-11T11:02:43.993000+00:00', 'pinned': False, 'nonce': '720593854243274752', 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'member': {'roles': ['706484808259338280', '699216280892473345', '570015187193692173'], 'premium_since': None, 'nick': None, 'mute': False, 'joined_at': '2018-06-06T18:26:19.487000+00:00', 'hoisted_role': None, 'deaf': False}, 'id': '720593859087958067', 'flags': 0, 'embeds': [], 'edited_timestamp': None, 'content': 'a bot that asks availibilty for dnd?', 'channel_id': '435468280384454667', 'author': {'username': 'Hamster', 'public_flags': 0, 'id': '260913491706118145', 'discriminator': '2673', 'avatar': 'b792cd7dc067f413a017810790483aae'}, 'attachments': [], 'guild_id': '435468279943790593'}}
+2020-06-11 12:03:06,934:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:03:06,934:DEBUG:discord.client: Dispatching event message
+2020-06-11 12:03:40,239:DEBUG:discord.gateway: Keeping websocket alive with sequence 23.
+2020-06-11 12:03:40,239:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:03:40,349:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:03:40,350:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 12:03:40,350:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:04:21,490:DEBUG:discord.gateway: Keeping websocket alive with sequence 23.
+2020-06-11 12:04:21,490:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:04:21,599:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:04:21,599:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 12:04:21,599:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:04:26,461:INFO:discord.gateway: Websocket closed with 4003 (Not authenticated.), attempting a reconnect.
+2020-06-11 12:04:26,461:INFO:discord.client: Got a request to RESUME the websocket.
+2020-06-11 12:04:26,461:DEBUG:discord.client: Dispatching event disconnect
+2020-06-11 12:04:26,616:DEBUG:discord.http: GET https://discordapp.com/api/v7/gateway with None has returned 200
+2020-06-11 12:04:26,616:DEBUG:discord.http: GET https://discordapp.com/api/v7/gateway has received {'url': 'wss://gateway.discord.gg'}
+2020-06-11 12:04:26,901:INFO:discord.gateway: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6&compress=zlib-stream
+2020-06-11 12:04:26,902:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:04:26,902:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 10, 'd': {'heartbeat_interval': 41250, '_trace': ['["gateway-prd-main-xdtc",{"micros":0.0}]']}}
+2020-06-11 12:04:26,902:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:04:26,902:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:04:26,902:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:04:26,902:INFO:discord.gateway: Shard ID None has sent the RESUME payload.
+2020-06-11 12:04:27,008:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:04:27,008:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 12:04:27,008:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:04:27,032:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:04:27,032:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 9, 'd': False}
+2020-06-11 12:04:27,032:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:04:27,032:INFO:discord.gateway: Shard ID None session has been invalidated.
+2020-06-11 12:04:32,034:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:04:32,034:INFO:discord.gateway: Shard ID None has sent the IDENTIFY payload.
+2020-06-11 12:04:32,173:INFO:discord.gateway: Websocket closed with 4004 (Authentication failed.), cannot reconnect.
+2020-06-11 12:04:32,173:DEBUG:discord.client: Dispatching event disconnect
+2020-06-11 12:04:32,174:INFO:discord.client: Cleaning up tasks.
+2020-06-11 12:04:32,175:INFO:discord.client: Closing the event loop.
+ket alive with sequence 25.
+2020-06-11 12:02:45,901:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:02:46,015:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:02:46,015:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 12:02:46,015:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:02:51,820:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:02:51,820:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'TYPING_START', 's': 26, 'op': 0, 'd': {'user_id': '260913491706118145', 'timestamp': 1591873348, 'member': {'user': {'username': 'Hamster', 'id': '260913491706118145', 'discriminator': '2673', 'avatar': 'b792cd7dc067f413a017810790483aae'}, 'roles': ['706484808259338280', '699216280892473345', '570015187193692173'], 'premium_since': None, 'nick': None, 'mute': False, 'joined_at': '2018-06-06T18:26:19.487000+00:00', 'hoisted_role': None, 'deaf': False}, 'channel_id': '435468280384454667', 'guild_id': '435468279943790593'}}
+2020-06-11 12:02:51,820:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:02:51,821:DEBUG:discord.client: Dispatching event typing
+2020-06-11 12:03:00,018:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:03:00,018:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'TYPING_START', 's': 27, 'op': 0, 'd': {'user_id': '260913491706118145', 'timestamp': 1591873357, 'member': {'user': {'username': 'Hamster', 'id': '260913491706118145', 'discriminator': '2673', 'avatar': 2020-06-11 12:03:00,025:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:03:00,025:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'TYPING_START', 's': 29, 'op': 0, 'd': {'user_id': '260913491706118145', 'timestamp': 1591873357, 'member': {'user': {'username': 'Hamster', 'id': '260913491706118145', 'discriminator': '2673', 'avatar': 'b792cd7dc067f413a017810790483aae'}, 'roles': ['706484808259338280', '699216280892473345', '5700151872020-06-11 12:03:06,929:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:03:06,929:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 28, 'op': 0, 'd': {'type': 0, 'tts': False, 'timestamp': '2020-06-11T11:02:43.993000+00:00', 'pinned': False, 'nonce': '720593854243274752', 'mentions': [], 'mention_roles': [], 'me2020-06-11 12:03:06,935:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:03:06,935:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 30, 'op': 0, 'd': {'type': 0, 'tts': False, 'timestamp': '2020-06-11T11:02:43.993000+00:00', 'pinned': False, 'nonce': '720593854243274752', 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'member': {'roles': ['706484808259338280', '699216280892473345', '570015187193692173'], 'premium_since': None, 'nick': None, 'mute': False, 'joined_at': '2018-06-06T18:26:19.487000+00:00', 'hoisted_role': None, 'deaf': False}, 'id': '720593859087958067', 'flags': 0, 'embeds': [], 'edited_timestamp': None, 'content': 'a bot that asks availibilty for dnd?', 'channel_id': '4354682020-06-11 12:03:27,152:DEBUG:discord.gateway: Keeping websocket alive with sequence 28.
+2020-06-11 12:03:27,152:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:03:27,294:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:03:27,294:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 12:03:27,294:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:04:08,403:DEBUG:discord.gateway: Keeping websocket alive with sequence 28.
+2020-06-11 12:04:08,403:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:04:08,513:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:04:08,513:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 12:04:08,513:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:04:26,447:INFO:discord.gateway: Websocket closed with 4003 (Not authenticated.), attempting a reconnect.
+2020-06-11 12:04:26,447:INFO:discord.client: Got a request to RESUME the websocket.
+2020-06-11 12:04:26,447:DEBUG:discord.client: Dispatching event disconnect
+2020-06-11 12:04:26,609:DEBUG:discord.http: GET https://discordapp.com/api/v7/gateway with None has returned 200
+2020-06-11 12:04:26,609:DEBUG:discord.http: GET https://discordapp.com/api/v7/gateway has received {'url': 'wss://gateway.discord.gg'}
+2020-06-11 12:04:26,909:INFO:discord.gateway: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6&compress=zlib-stream
+2020-06-11 12:04:26,909:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:04:26,909:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 10, 'd': {'heartbeat_interval': 41250, 2020-06-11 12:04:26,921:INFO:discord.gateway: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6&compress=zlib-stream
+2020-06-11 12:04:26,921:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:04:26,921:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 10, 'd': {'heartbeat_interval': 41250, '_trace': ['["2020-06-11 12:04:27,022:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:04:27,022:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 12:04:27,022:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:04:27,043:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:04:27,043:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 9, 'd': False}
+2020-06-11 12:04:27,043:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:04:27,043:INFO:discord.gateway: Shard ID None session has been invalid2020-062020-06-11 12:04:32,044:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:04:32,044:INFO:discord.gateway: Shard ID None has sent the IDENTIFY payload.
+2020-06-11 12:04:32,177:INFO:discord.gateway: Websocket closed with 4004 (Authentication failed.), cannot reconnect.
+2020-06-11 12:04:32,178:DEBUG:discord.client: Dispatching event disconnect
+2020-06-11 12:04:32,178:INFO:discord.client: Cleaning up tasks.
+2020-06-11 12:04:32,179:INFO:discord.client: Closing the event loop.
+: Shard ID None has sent the IDENTIFY payload.
+2020-06-11 12:04:32,190:INFO:discord.gateway: Websocket closed with 4004 (Authentication failed.), cannot reconnect.
+2020-06-11 12:04:32,191:DEBUG:discord.client: Dispatching event disconnect
+2020-06-11 12:04:32,191:INFO:discord.client: Cleaning up tasks.
+2020-06-11 12:04:32,192:INFO:discord.client: Closing the event loop.
+ent socket_raw_receive
+2020-06-11 11:56:25,927:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 11:56:25,927:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 11:57:07,053:DEBUG:discord.gateway: Keeping websocket alive with sequence 33.
+2020-06-11 11:57:07,053:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 11:57:07,157:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 11:57:07,158:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 11:57:07,158:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 11:57:48,304:DEBUG:discord.gateway: Keeping websocket alive with sequence 33.
+2020-06-11 11:57:48,304:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 11:57:48,409:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 11:57:48,410:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 11:57:48,410:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 11:58:29,555:DEBUG:discord.gateway: Keeping websocket alive with sequence 33.
+2020-06-11 11:58:29,555:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 11:58:29,665:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 11:58:29,666:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 11:58:29,666:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 11:59:10,805:DEBUG:discord.gateway: Keeping websocket alive with sequence 33.
+2020-06-11 11:59:10,805:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 11:59:10,917:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 11:59:10,917:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 11:59:10,917:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 11:59:52,056:DEBUG:discord.gateway: Keeping websocket alive with sequence 33.
+2020-06-11 11:59:52,056:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 11:59:52,188:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 11:59:52,189:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 11:59:52,189:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:00:33,307:DEBUG:discord.gateway: Keeping websocket alive with sequence 33.
+2020-06-11 12:00:33,307:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:00:33,419:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:00:33,419:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 12:00:33,419:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:00:40,352:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:00:40,352:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'PRESENCE_UPDATE', 's': 34, 'op': 0, 'd': {'user': {'id': '260913491706118145'}, 'status': 'online', 'roles': ['706484808259338280', '699216280892473345', '570015187193692173'], 'premium_since': None, 'nick': None, 'guild_id': '435468279943790593', 'game': None, 'client_status': {'desktop': 'online'}, 'activities': []}}
+2020-06-11 12:00:40,353:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:00:40,353:DEBUG:discord.client: Dispatching event member_update
+2020-06-11 12:01:14,557:DEBUG:discord.gateway: Keeping websocket alive with sequence 34.
+2020-06-11 12:01:14,557:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:01:14,681:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:01:14,682:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 12:01:14,682:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:01:55,808:DEBUG:discord.gateway: Keeping websocket alive with sequence 34.
+2020-06-11 12:01:55,808:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:01:55,927:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:01:55,927:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 12:01:55,927:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:02:37,058:DEBUG:discord.gateway: Keeping websocket alive with sequence 34.
+2020-06-11 12:02:37,058:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:02:37,163:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:02:37,164:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 12:02:37,164:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:02:51,814:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:02:51,814:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'TYPING_START', 's': 35, 'op': 0, 'd': {'user_id': '260913491706118145', 'timestamp': 1591873348, 'member': {'user': {'username': 'Hamster', 'id': '260913491706118145', 'discriminator': '2673', 'avatar': 'b792cd7dc067f413a017810790483aae'}, 'roles': ['706484808259338280', '699216280892473345', '570015187193692173'], 'premium_since': None, 'nick': None, 'mute': False, 'joined_at': '2018-06-06T18:26:19.487000+00:00', 'hoisted_role': None, 'deaf': False}, 'channel_id': '435468280384454667', 'guild_id': '435468279943790593'}}
+2020-06-11 12:02:51,814:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:02:51,814:DEBUG:discord.client: Dispatching event typing
+2020-06-11 12:03:00,022:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:03:00,022:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'TYPING_START', 's': 36, 'op': 0, 'd': {'user_id': '260913491706118145', 'timestamp': 1591873357, 'member': {'user': {'username': 'Hamster', 'id': '260913491706118145', 'discriminator': '2673', 'avatar': 'b792cd7dc067f413a017810790483aae'}, 'roles': ['706484808259338280', '699216280892473345', '570015187193692173'], 'premium_since': None, 'nick': None, 'mute': False, 'joined_at': '2018-06-06T18:26:19.487000+00:00', 'hoisted_role': None, 'deaf': False}, 'channel_id': '435468280384454667', 'guild_id': '435468279943790593'}}
+2020-06-11 12:03:00,022:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:03:00,022:DEBUG:discord.client: Dispatching event typing
+2020-06-11 12:03:06,941:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:03:06,941:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 37, 'op': 0, 'd': {'type': 0, 'tts': False, 'timestamp': '2020-06-11T11:02:43.993000+00:00', 'pinned': False, 'nonce': '720593854243274752', 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'member': {'roles': ['706484808259338280', '699216280892473345', '570015187193692173'], 'premium_since': None, 'nick': None, 'mute': False, 'joined_at': '2018-06-06T18:26:19.487000+00:00', 'hoisted_role': None, 'deaf': False}, 'id': '720593859087958067', 'flags': 0, 'embeds': [], 'edited_timestamp': None, 'content': 'a bot that asks availibilty for dnd?', 'channel_id': '435468280384454667', 'author': {'username': 'Hamster', 'public_flags': 0, 'id': '260913491706118145', 'discriminator': '2673', 'avatar': 'b792cd7dc067f413a017810790483aae'}, 'attachments': [], 'guild_id': '435468279943790593'}}
+2020-06-11 12:03:06,942:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:03:06,942:DEBUG:discord.client: Dispatching event message
+2020-06-11 12:03:18,309:DEBUG:discord.gateway: Keeping websocket alive with sequence 37.
+2020-06-11 12:03:18,309:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:03:18,410:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:03:18,410:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 12:03:18,410:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:03:59,560:DEBUG:discord.gateway: Keeping websocket alive with sequence 37.
+2020-06-11 12:03:59,560:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:03:59,674:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:03:59,674:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 12:03:59,674:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:04:26,444:INFO:discord.gateway: Websocket closed with 4003 (Not authenticated.), attempting a reconnect.
+2020-06-11 12:04:26,444:INFO:discord.client: Got a request to RESUME the websocket.
+2020-06-11 12:04:26,444:DEBUG:discord.client: Dispatching event disconnect
+2020-06-11 12:04:26,612:DEBUG:discord.http: GET https://discordapp.com/api/v7/gateway with None has returned 200
+2020-06-11 12:04:26,613:DEBUG:discord.http: GET https://discordapp.com/api/v7/gateway has received {'url': 'wss://gateway.discord.gg'}
+2020-06-11 12:04:26,911:INFO:discord.gateway: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6&compress=zlib-stream
+2020-06-11 12:04:26,912:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:04:26,912:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 10, 'd': {'heartbeat_interval': 41250, '_trace': ['["gateway-prd-main-9h40",{"micros":0.0}]']}}
+2020-06-11 12:04:26,912:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:04:26,912:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:04:26,913:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:04:26,914:INFO:discord.gateway: Shard ID None has sent the RESUME payload.
+2020-06-11 12:04:27,032:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:04:27,032:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 12:04:27,032:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:04:27,044:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:04:27,044:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 9, 'd': False}
+2020-06-11 12:04:27,044:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:04:27,044:INFO:discord.gateway: Shard ID None session has been invalidated.
+2020-06-11 12:04:32,045:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:04:32,045:INFO:discord.gateway: Shard ID None has sent the IDENTIFY payload.
+2020-06-11 12:04:32,168:INFO:discord.gateway: Websocket closed with 4004 (Authentication failed.), cannot reconnect.
+2020-06-11 12:04:32,169:DEBUG:discord.client: Dispatching event disconnect
+2020-06-11 12:04:32,169:INFO:discord.client: Cleaning up tasks.
+2020-06-11 12:04:32,170:INFO:discord.client: Closing the event loop.
+ne: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 12:01:27,117:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:01:27,139:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:01:27,139:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'RESUMED', 's': 41, 'op': 0, 'd': {'_trace': ['["gateway-prd-main-hm0s",{"micros":1570,"calls":["discord-sessions-prd-1-34",{"micros":17}]}]']}}
+2020-06-11 12:01:27,139:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:01:27,139:INFO:discord.gateway: Shard ID None has successfully RESUMED session 067697d8b2f7dd808d659f31609e16be under trace ["gateway-prd-main-hm0s",{"micros":1570,"calls":["discord-sessions-prd-1-34",{"micros":17}]}].
+2020-06-11 12:01:27,139:DEBUG:discord.client: Dispatching event resumed
+2020-06-11 12:02:04,127:WARNING:discord.gateway: Shard ID None has stopped responding to the gateway. Closing and restarting.
+2020-06-11 12:02:08,256:DEBUG:discord.gateway: Keeping websocket alive with sequence 41.
+2020-06-11 12:02:08,256:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:02:08,375:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:02:08,375:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 12:02:08,375:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:02:49,506:DEBUG:discord.gateway: Keeping websocket alive with sequence 41.
+2020-06-11 12:02:49,506:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:02:49,617:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:02:49,617:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 12:02:49,617:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:02:51,813:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:02:51,813:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'TYPING_START', 's': 42, 'op': 0, 'd': {'user_id': '260913491706118145', 'timestamp': 1591873348, 'member': {'user': {'username': 'Hamster', 'id': '260913491706118145', 'discriminator': '2673', 'avatar': 'b792cd7dc067f413a017810790483aae'}, 'roles': ['706484808259338280', '699216280892473345', '570015187193692173'], 'premium_since': None, 'nick': None, 'mute': False, 'joined_at': '2018-06-06T18:26:19.487000+00:00', 'hoisted_role': None, 'deaf': False}, 'channel_id': '435468280384454667', 'guild_id': '435468279943790593'}}
+2020-06-11 12:02:51,813:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:02:51,814:DEBUG:discord.client: Dispatching event typing
+2020-06-11 12:03:00,024:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:03:00,024:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'TYPING_START', 's': 43, 'op': 0, 'd': {'user_id': '260913491706118145', 'timestamp': 1591873357, 'member': {'user': {'username': 'Hamster', 'id': '260913491706118145', 'discriminator': '2673', 'avatar': 'b792cd7dc067f413a017810790483aae'}, 'roles': ['706484808259338280', '699216280892473345', '570015187193692173'], 'premium_since': None, 'nick': None, 'mute': False, 'joined_at': '2018-06-06T18:26:19.487000+00:00', 'hoisted_role': None, 'deaf': False}, 'channel_id': '435468280384454667', 'guild_id': '435468279943790593'}}
+2020-06-11 12:03:00,024:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:03:00,024:DEBUG:discord.client: Dispatching event typing
+2020-06-11 12:03:06,933:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:03:06,933:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 44, 'op': 0, 'd': {'type': 0, 'tts': False, 'timestamp': '2020-06-11T11:02:43.993000+00:00', 'pinned': False, 'nonce': '720593854243274752', 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'member': {'roles': ['706484808259338280', '699216280892473345', '570015187193692173'], 'premium_since': None, 'nick': None, 'mute': False, 'joined_at': '2018-06-06T18:26:19.487000+00:00', 'hoisted_role': None, 'deaf': False}, 'id': '720593859087958067', 'flags': 0, 'embeds': [], 'edited_timestamp': None, 'content': 'a bot that asks availibilty for dnd?', 'channel_id': '435468280384454667', 'author': {'username': 'Hamster', 'public_flags': 0, 'id': '260913491706118145', 'discriminator': '2673', 'avatar': 'b792cd7dc067f413a017810790483aae'}, 'attachments': [], 'guild_id': '435468279943790593'}}
+2020-06-11 12:03:06,933:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:03:06,934:DEBUG:discord.client: Dispatching event message
+2020-06-11 12:03:30,757:DEBUG:discord.gateway: Keeping websocket alive with sequence 44.
+2020-06-11 12:03:30,757:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:03:30,883:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:03:30,883:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 12:03:30,883:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:04:12,008:DEBUG:discord.gateway: Keeping websocket alive with sequence 44.
+2020-06-11 12:04:12,008:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:04:12,129:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:04:12,129:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 12:04:12,129:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:04:26,439:INFO:discord.gateway: Websocket closed with 4003 (Not authenticated.), attempting a reconnect.
+2020-06-11 12:04:26,439:INFO:discord.client: Got a request to RESUME the websocket.
+2020-06-11 12:04:26,439:DEBUG:discord.client: Dispatching event disconnect
+2020-06-11 12:04:26,612:DEBUG:discord.http: GET https://discordapp.com/api/v7/gateway with None has returned 200
+2020-06-11 12:04:26,612:DEBUG:discord.http: GET https://discordapp.com/api/v7/gateway has received {'url': 'wss://gateway.discord.gg'}
+2020-06-11 12:04:26,904:INFO:discord.gateway: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6&compress=zlib-stream
+2020-06-11 12:04:26,905:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:04:26,905:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 10, 'd': {'heartbeat_interval': 41250, '_trace': ['["gateway-prd-main-fffg",{"micros":0.0}]']}}
+2020-06-11 12:04:26,905:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:04:26,905:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:04:26,905:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:04:26,905:INFO:discord.gateway: Shard ID None has sent the RESUME payload.
+2020-06-11 12:04:27,020:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:04:27,020:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-11 12:04:27,020:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:04:27,048:DEBUG:discord.client: Dispatching event socket_raw_receive
+2020-06-11 12:04:27,048:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 9, 'd': False}
+2020-06-11 12:04:27,048:DEBUG:discord.client: Dispatching event socket_response
+2020-06-11 12:04:27,048:INFO:discord.gateway: Shard ID None session has been invalidated.
+2020-06-11 12:04:32,049:DEBUG:discord.client: Dispatching event socket_raw_send
+2020-06-11 12:04:32,049:INFO:discord.gateway: Shard ID None has sent the IDENTIFY payload.
+2020-06-11 12:04:32,660:INFO:discord.gateway: Websocket closed with 4004 (Authentication failed.), cannot reconnect.
+2020-06-11 12:04:32,660:DEBUG:discord.client: Dispatching event disconnect
+2020-06-11 12:04:32,661:INFO:discord.client: Cleaning up tasks.
+2020-06-11 12:04:32,661:INFO:discord.client: Closing the event loop.
