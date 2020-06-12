@@ -1,6 +1,6 @@
 # This class holds the info of a party for the discord bot, from here it can
 # addMembers,   removeMember,   set a new leader
-class party:
+class Party:
     def __init__(self,pSize:int, name,owner:str):
         self.pSize = pSize
         self.name = name

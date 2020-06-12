@@ -2,6 +2,11 @@ import discord  # Import the relevent discord Framework
 import logging  # Use Py's logging module to track errors
 from discord.ext import commands
 from classes.party import Party
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
+BOT_KEY = os.getenv("BOT_KEY")
 
 prefix = "?"
 bot = commands.Bot(command_prefix='?')
@@ -35,14 +40,26 @@ async def on_message(message):
 # This command will create a party oject with the caller as the owner
 @bot.command()
 async def cParty(ctx, pSize:int ,*, name:str):
-    await ctx.send("Creating party of: size = " + str(pSize) + ", Name = " + name + ",Owner = " + ctx.author)
+    await ctx.send("Creating party of: size = " + str(pSize) + ",\n Name = " + name + ",\nOwner = " + ctx.author)
     partyList.append(Party(pSize, name, ctx.author))
     author = ctx.message.author
-    await client.create_role(author.server, name="role name")
+    await client.create_role(author.server, name="party:"+name, color=discord.Colour.from_rgb(78, 255, 33))
 
-# Command to invite members of the 'guild' to the party
 @bot.command()
-async def cParty(ctx):
+async def listParty(ctx, *, searchName:str):
+    rolesList = ctx.author.roles
+    await ctx.send(rolesList)
+    partyList = []
+    for role in rolesList:
+        if "party:" in role[:6]:
+            partyList.append(role[6:])
 
+    # if len(partyList):
+    #     await ctx.send(("You are currently part of no parties. \n"
+    #         "To create a party use: ?cParty [party Size] [Name of Party]\n"
+    #         "To list all recruiting parties use: ?findParties"))
+    # elif(searchName != ""):
+    #     if (searchName in partyList):
+    #         discord.role
 
-bot.run('')
+bot.run(BOT_KEY)
