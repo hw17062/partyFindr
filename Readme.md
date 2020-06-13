@@ -12,7 +12,7 @@ Hello, The aim of this project is to be able to provide useful sub-groups (Dubbe
 -  [x] ~~Leave Party~~
 -  [x] ~~Disband Party~~
 -  [x] ~~create Embeded party invite~~
--  [x] ~~Invite people to party~~
+-  [ ] Invite people to party
 - [ ] Join party invited to
 - [ ] Update Party Ad on joining/leaving
 - [ ] Store Parties on Disk
@@ -50,5 +50,48 @@ Holds wether the party is open to everyone in it's channel's origins or is invit
 Here I will describe the comands for the Bot. The Defult command_Prefix is '?'. This is currently uneditable.
 
 ### ?cParty <a name = "cParty"></a>
-*Command* '?cParty {partySize} "{partyName}" "{Description}" *{Invites}'
-cParty will create the party, setting the athor as the owner. It will create a new role on the server named "Party:{partyName}" , add this role on the author. Then, it will create an 'Ad' for the party
+*Command* '?cParty {partySize} "{partyName}" "{Description}" *{mentions}' 
+cParty will create the party, setting the athor as the owner. It will create a new role on the server named "Party:{partyName}" , add this role on the author. Then, it will create an 'Ad' for the party with an Embed message. If someone invited :Thumbs Up: reaction the ad, they will join the party.<br>
+This ad will be updated upon members joining and leaving, and will be removed when the party is full.
+
+#### Example
+```
+?cParty 5 "WoW Dungeon Run" "Group of only the best dungeoneers!" @HealerInNeed @iNeedHealing @Palawin 
+```
+
+### ?listPartyMembers 
+*Command* '?listPartyMembers "{partyName}" '
+
+This command will list all members in a party with the name "partyName". This will only display the members if you are part of the party.
+#### Example
+```
+?listPartyMembers "WoW Dungeon Run"
+```
+
+### ?leaveParty
+*Command* '?leaveParty "{partyName}" '
+This command will remove you from the party with the given name, should you be in this party.
+If the leader leaves, a new leader is assigned. If a party becomes empty, it will automatically be disbanded.
+
+#### Example
+```
+?leaveParty "WoW Dungeon Run"
+```
+
+### ?disbandParty
+*Command* '?disbandParty "{partyName}"
+If you are the leader of a party, this command will delete the party from the role list.
+
+#### Example
+```
+?disbandParty "WoW Dungeon Run"
+```
+
+### ?inviteMembers
+*Command* '?inviteMembers "{partyName}" *{mentions} '
+If you are the leader, this command will update the party Ad Message allowing the members you mention to join the party should they wish.
+
+#### Example
+```
+?inviteMembers "WoW Dungeon Run" @betterHealer
+```

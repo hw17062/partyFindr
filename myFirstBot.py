@@ -76,6 +76,39 @@ async def cParty(ctx, pSize:int, name:str, description:str, *, invitees):
     # Lastly, create an embed of the party to advertise/invite members
     await embedInvites(ctx, name, description)
 
+# This will set up an Embed message that will advertice the party as well as showing who is invited
+async def embedInvites(ctx, partyName, description):
+    index = findIndexOfParty(ctx.guild.id, partyName)
+    thisParty = partyList[ctx.guild.id][index]
+    mentions = []
+    membersAsString = ""
+    mentionsAsString = ""
+    if not(ctx.message.mention_everyone):
+        mentions = ctx.message.mentions
+        mentionsAsString = ", ".join([user.mention for user in mentions])
+        thisParty.addInvited(mentions)
+    else:
+        thisParty.openParty = True
+        mentionsAsString = "Open Party"
+
+    membersAsString = ", ".join([mem.name for mem in thisParty.role.members])
+    partySizeString = "{0} / {1}".format(len(thisParty.role.members), thisParty.partySize)
+    # create embed object
+    eInvMes = discord.Embed(title=partyName,
+                            timestamp= datetime.datetime.utcnow(),
+                            color=discord.Colour.from_rgb(78, 255, 33),
+                            description= description)
+
+    eInvMes.add_field(name="Owner", value=ctx.author.name, inline=False)
+    eInvMes.add_field(name="members", value=membersAsString, inline=True)
+    eInvMes.add_field(name="Invited", value=mentionsAsString, inline=True)
+    eInvMes.add_field(name="party size", value=partySizeString , inline=True)
+    eInvMes.add_field(name="How to Join", value=" react with a 👍 to join the party!" , inline=False)
+
+    message = await ctx.send(embed=eInvMes)
+
+    thisParty.inviteMessage = message
+
 
 # This command lists the parties members of a given party if the author is part of the party
 @bot.command()
@@ -168,44 +201,13 @@ async def inviteMembers(ctx, partyName:str, *, mentions):
     index = findIndexOfParty(ctx.guild.id, partyName)
     partyList[ctx.guild.id][index].addInvited(ctx.message.mentions)
 
-# This will set up an Embed message that will advertice the party as well as showing who is invited
-async def embedInvites(ctx, partyName, description):
-    index = findIndexOfParty(ctx.guild.id, partyName)
-    thisParty = partyList[ctx.guild.id][index]
-    mentions = []
-    membersAsString = ""
-    if not(ctx.message.mention_everyone):
-        mentions = ctx.message.mentions
-        mentionsAsString = ", ".join([user.mention for user in mentions])
-        thisParty.addInvited(mentions)
-    else:
-        thisParty.openParty = True
-        mentionsAsString = "Open Party"
 
-    membersAsString = ", ".join([mem.name for mem in thisParty.role.members])
-    partySizeString = "{0} / {1}".format(len(thisParty.role.members), thisParty.partySize)
-    # create embed object
-    eInvMes = discord.Embed(title=partyName,
-                            timestamp= datetime.datetime.utcnow(),
-                            color=discord.Colour.from_rgb(78, 255, 33),
-                            description= description)
-
-    eInvMes.add_field(name="Owner", value=ctx.author.name, inline=False)
-    eInvMes.add_field(name="members", value=membersAsString, inline=True)
-    eInvMes.add_field(name="Invited", value=mentionsAsString, inline=True)
-    eInvMes.add_field(name="party size", value=partySizeString , inline=True)
-    eInvMes.add_field(name="How to Join", value=" react with a 👍 to join the party!" , inline=False)
-
-    message = await ctx.send(embed=eInvMes)
-
-    thisParty.inviteMessage = message
-
-# Checks for a thumbs up emoji on a party ad to join the party
-@client.event
-async def on_reaction_add(reaction, user):
-    if not reaction.me:
-        if reaction.emoji == "\N{THUMBS UP SIGN}":
-            await
+# # Checks for a thumbs up emoji on a party ad to join the party
+# @client.event
+# async def on_reaction_add(reaction, user):
+#     if not reaction.me:
+#         if reaction.emoji == "\N{THUMBS UP SIGN}":
+#             await
 
 
             # messageID = reaction.message.id
