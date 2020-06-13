@@ -23,18 +23,18 @@ Hello, The aim of this project is to be able to provide useful sub-groups (Dubbe
 # Man Pages
 
 ## <a name="Class_Party"></a> Party
-*class* Party(partySize ,role , owner)
+*class* Party(partySize ,role , owner)  <br>
 Represents a party. Init on '?cParty' 
 
 ### partySize
 **Type**  int
 This shows the party's Max size.  Set on Init
 ### role
- **Type** Discord.Role
+ **Type** Discord.Role <br>
  This holds the role created in the guild for this party.  Set on Init
  ### Owner
- **Type** str
+ **Type** str <br>
  Holds the Name of the current leader of the party.  Set on Init
  ### invitedMembers
- **Type** [str]
+ **Type** [str] <br>
  Holds a list of all members that have been invited to the party to act as a white list.
