@@ -49,6 +49,6 @@ Holds wether the party is open to everyone in it's channel's origins or is invit
 ## Bot.Commands
 Here I will describe the comands for the Bot. The Defult command_Prefix is '?'. This is currently uneditable.
 
-(###?cParty)
+### ?cParty <a name = "cParty"></a>
 *Command* '?cParty {partySize} "{partyName}" "{Description}" *{Invites}'
 cParty will create the party, setting the athor as the owner. It will create a new role on the server named "Party:{partyName}" , add this role on the author. Then, it will create an 'Ad' for the party
