@@ -5,6 +5,8 @@ from classes.party import Party
 import sys
 import os
 from dotenv import load_dotenv
+import datetime
+import asyncio
 load_dotenv()
 
 BOT_KEY = os.getenv("BOT_KEY")
@@ -32,13 +34,22 @@ errorHandler.setLevel(logging.ERROR)
 errorHandler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
 logger.addHandler(errorHandler)
 
+# this will loop through a guild and find the index of the party named "searchName"
+# returns -1 if party not found
+def findIndexOfParty(guildID, searchName):
+    parties = partyList[guildID]
+    for i in range(len(parties)):
+        if ("party:" + searchName) == parties[i].role.name:
+            return i
+
+
 @bot.event
 async def on_ready():
     print('We have logged in as {0.user}'.format(bot))
 
 # This command will create a party oject with the caller as the owner
 @bot.command()
-async def cParty(ctx, pSize:int ,*, name:str):
+async def cParty(ctx, pSize:int, name:str, description:str, *, invitees):
     # ctx.author passes a user object for private channels which has a different
     # name for the user's nickname.
     # Nonprivate passes a user
@@ -48,6 +59,8 @@ async def cParty(ctx, pSize:int ,*, name:str):
     await ctx.send("Creating party of: size = " + str(pSize) +
     ",\n Name = " + name +
     ",\nOwner = " + authorNick)
+
+    # create role then add the author as the leader
     newRole = await ctx.guild.create_role(name = "party:"+name, color = discord.Colour.from_rgb(78, 255, 33))
     await ctx.message.author.add_roles(newRole)
 
@@ -60,18 +73,13 @@ async def cParty(ctx, pSize:int ,*, name:str):
         partyList[ctx.guild.id] = []
         partyList[ctx.guild.id].append(Party(pSize, newRole, authorNick))
 
-# this will loop through a guild and find the index of the party named "searchName"
-# returns -1 if party not found
-def findIndexOfParty(guildID, searchName):
-    parties = partyList[guildID]
-    for i in range(len(parties)):
-        if ("party:" + searchName) == parties[i].role.name:
-            return i
+    # Lastly, create an embed of the party to advertise/invite members
+    await embedInvites(ctx, name, description)
 
 
 # This command lists the parties members of a given party if the author is part of the party
 @bot.command()
-async def listPartyMembers(ctx, *, searchName:str):
+async def listPartyMembers(ctx, searchName:str):
     # if the party exists in the guild they are searching in
     partyIndex = findIndexOfParty(ctx.guild.id, searchName)
 
@@ -101,7 +109,8 @@ async def listPartyMembers(ctx, *, searchName:str):
         else:
             await ctx.send("You are NOT in this party")
     else:
-        await ctx.send("I could not find this party. Possible reasons: Party name mis-spelt, Party disbanded or incorrect server")
+        await ctx.send("I could not find this party. Possible reasons: Party name mis-spelt, Party disbanded or incorrect server\n"
+                        "?listPartyMembers \"{party name}\"")
 
 # This will take a party (noted by it's guild and index) and check if it is empty
 # if it is, delete it and return 1, else return 0
@@ -114,7 +123,7 @@ async def deleteIfEmpty(guildID, index):
 
 # This command allows a user to leave a party
 @bot.command()
-async def leaveParty(ctx,*, partyName:str):
+async def leaveParty(ctx, partyName:str):
     try:
         i = findIndexOfParty(ctx.guild.id, partyName)
         if i >= 0:
@@ -139,11 +148,11 @@ async def leaveParty(ctx,*, partyName:str):
 
 # If you are the Leader, you will be able to delete the party
 @bot.command()
-async def disbandParty(ctx,*, partyName:str):
+async def disbandParty(ctx, partyName:str):
     try:
         i = findIndexOfParty(ctx.guild.id, partyName)
         if i >= 0:
-            if partyList[ctx.guild.id][i].owner == ctx.author.name
+            if partyList[ctx.guild.id][i].owner == ctx.author.name:
                 await partyList[ctx.guild.id][i].role.delete(reason = "Party disbanded")
                 await ctx.send("Party Disbanded!")
             else:
@@ -153,6 +162,55 @@ async def disbandParty(ctx,*, partyName:str):
 
     except discord.errors.HTTPException:
         await ctx.send("Could not remove you from the party. possible reasons: Incorrect Name, this party has been disbanded")
+
+@bot.command()
+async def inviteMembers(ctx, partyName:str, *, mentions):
+    index = findIndexOfParty(ctx.guild.id, partyName)
+    partyList[ctx.guild.id][index].addInvited(ctx.message.mentions)
+
+# This will set up an Embed message that will advertice the party as well as showing who is invited
+async def embedInvites(ctx, partyName, description):
+    index = findIndexOfParty(ctx.guild.id, partyName)
+    thisParty = partyList[ctx.guild.id][index]
+    mentions = []
+    membersAsString = ""
+    if not(ctx.message.mention_everyone):
+        mentions = ctx.message.mentions
+        mentionsAsString = ", ".join([user.mention for user in mentions])
+        thisParty.addInvited(mentions)
+    else:
+        thisParty.openParty = True
+        mentionsAsString = "Open Party"
+
+    membersAsString = ", ".join([mem.name for mem in thisParty.role.members])
+    partySizeString = "{0} / {1}".format(len(thisParty.role.members), thisParty.partySize)
+    # create embed object
+    eInvMes = discord.Embed(title=partyName,
+                            timestamp= datetime.datetime.utcnow(),
+                            color=discord.Colour.from_rgb(78, 255, 33),
+                            description= description)
+
+    eInvMes.add_field(name="Owner", value=ctx.author.name, inline=False)
+    eInvMes.add_field(name="members", value=membersAsString, inline=True)
+    eInvMes.add_field(name="Invited", value=mentionsAsString, inline=True)
+    eInvMes.add_field(name="party size", value=partySizeString , inline=True)
+    eInvMes.add_field(name="How to Join", value=" react with a 👍 to join the party!" , inline=False)
+
+    message = await ctx.send(embed=eInvMes)
+
+    thisParty.inviteMessage = message
+
+# Checks for a thumbs up emoji on a party ad to join the party
+@client.event
+async def on_reaction_add(reaction, user):
+    if not reaction.me:
+        if reaction.emoji == "\N{THUMBS UP SIGN}":
+            await
+
+
+            # messageID = reaction.message.id
+
+            # for i in range(len(partyList[reaction.message.guild.id]))
 
 
 bot.run(BOT_KEY)
