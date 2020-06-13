@@ -11,14 +11,14 @@ class Party():
         self.openParty = False
 
     def promoteOwner(self, newLeader):
-        if newLeader in self.members:
-            self.owner = newLeader
+        if newLeader in [mem.name for mem in self.role.members] :
+            self.owner = newLeader.name
             return 1
         else:
             return 0
 
     def isFull(self):
-        if len(self.members) == self.pSize:
+        if len(self.role.members) == self.pSize:
             return 0
         else:
             return 1

@@ -20,32 +20,6 @@ Hello, The aim of this project is to be able to provide useful sub-groups (Dubbe
 - [ ] Create Text Chat
 - [ ] Create Voice Channel
 
-# Man Pages
-
-## <a name="Class_Party"></a> Party
-*class* Party(partySize ,role , owner)  <br>
-Represents a party. Init on ['?cParty'](#cParty)
-
-<h5>party.</h5><h3> partySize </h3>
-**Type**  int  <br>
-This shows the party's Max size.  Set on Init
-### role
- **Type** [Discord.Role](https://discordpy.readthedocs.io/en/latest/api.html?highlight=role#discord.Role) <br>
- This holds the role created in the guild for this party.  Set on Init
- ### Owner
- **Type** str <br>
- Holds the Name of the current leader of the party.  Set on Init
- ### invitedMembers
- **Type** [str] <br>
- Holds a list of all members that have been invited to the party to act as a white list.
-### inviteMessage
-**Type** [Discord.Message](https://discordpy.readthedocs.io/en/latest/api.html?highlight=message#message)
-Holds the Message object created by the Embed Ad on ['?cParty'](#cParty). Made automatically on Creation with ['?cParty'](#cParty).
-
-### openParty
-**Type** Bool
-Holds wether the party is open to everyone in it's channel's origins or is invite only. Decided by invites, if @Everyone is used, this will be set to True
-
 ## Bot.Commands
 Here I will describe the comands for the Bot. The Defult command_Prefix is '?'. This is currently uneditable.
 
@@ -95,3 +69,49 @@ If you are the leader, this command will update the party Ad Message allowing th
 ```
 ?inviteMembers "WoW Dungeon Run" @betterHealer
 ```
+
+# Man Pages
+
+## <a name="Class_Party"></a> Party
+*class* Party(partySize ,role , owner)  <br>
+Represents a party. Init on ['?cParty'](#cParty)
+
+### Attributes
+
+####   partySize
+**Type**  int  <br>
+This shows the party's Max size.  Set on Init
+### role
+ **Type** [Discord.Role](https://discordpy.readthedocs.io/en/latest/api.html?highlight=role#discord.Role) <br>
+ This holds the role created in the guild for this party.  Set on Init
+ ### Owner
+ **Type** str <br>
+ Holds the Name of the current leader of the party.  Set on Init
+ ### invitedMembers
+ **Type** [str] <br>
+ Holds a list of all members that have been invited to the party to act as a white list.
+### inviteMessage
+**Type** [Discord.Message](https://discordpy.readthedocs.io/en/latest/api.html?highlight=message#message)
+Holds the Message object created by the Embed Ad on ['?cParty'](#cParty). Made automatically on Creation with ['?cParty'](#cParty).
+
+### openParty
+**Type** Bool
+Holds wether the party is open to everyone in it's channel's origins or is invite only. Decided by invites, if @Everyone is used, this will be set to True.
+
+### Methods
+
+#### promoteOwner
+*party.promoteOwner(self, newLeader)*
+**newLeader** - Str, name of user being promoted
+This will see if the new user is in the party, if they are, they are set as [Party.owner](#Owner)
+
+**returns** bool ? was transfer successful
+
+#### isFull
+*party.promoteOwner(self)*
+**returns** bool ? is party full
+
+#### addInvited
+*party.addInvited(self, members)*
+**members** =[Discord.Member]
+loops through members, adding them to Party.Role.members
