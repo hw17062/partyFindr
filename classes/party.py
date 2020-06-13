@@ -1,28 +1,13 @@
 # This class holds the info of a party for the discord bot, from here it can
 # addMembers,   removeMember,   set a new leader
-class Party:
-    def __init__(self,pSize:int, name,owner:str):
+
+import discord  # Import the relevent discord Framework
+
+class Party():
+    def __init__(self,pSize:int, role,owner:str):
         self.pSize = pSize
-        self.name = name
+        self.role = role
         self.owner = owner
-        self.members = [owner]
-
-    def addMembers(self, memberToAdd):
-        if self.isFull():
-            return 0
-        else:
-            self.members.append(memberToAdd)
-            return 1
-
-    def removeMember(self,memberToRm):
-        try:
-            self.members.remove(memberToRm)
-            if memberToRm == self.owner:
-                self.owner = self.members[0]
-            return 1
-        except ValueError:
-            return 0
-
 
     def promoteOwner(self, newLeader):
         if newLeader in self.members:
