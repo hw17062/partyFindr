@@ -5883,3 +5883,43 @@ aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host discordap
 2020-06-13 23:54:59,514 - discord.client - DEBUG - Dispatching event socket_raw_receive
 2020-06-13 23:54:59,515 - discord.gateway - DEBUG - For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
 2020-06-13 23:54:59,515 - discord.client - DEBUG - Dispatching event socket_response
+2020-06-13 23:55:40,667 - discord.gateway - DEBUG - Keeping websocket alive with sequence 7.
+2020-06-13 23:55:40,668 - discord.client - DEBUG - Dispatching event socket_raw_send
+2020-06-13 23:55:40,780 - discord.client - DEBUG - Dispatching event socket_raw_receive
+2020-06-13 23:55:40,782 - discord.gateway - DEBUG - For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-13 23:55:40,783 - discord.client - DEBUG - Dispatching event socket_response
+2020-06-13 23:56:21,919 - discord.gateway - DEBUG - Keeping websocket alive with sequence 7.
+2020-06-13 23:56:21,920 - discord.client - DEBUG - Dispatching event socket_raw_send
+2020-06-13 23:56:22,029 - discord.client - DEBUG - Dispatching event socket_raw_receive
+2020-06-13 23:56:22,030 - discord.gateway - DEBUG - For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-13 23:56:22,030 - discord.client - DEBUG - Dispatching event socket_response
+2020-06-13 23:57:03,172 - discord.gateway - DEBUG - Keeping websocket alive with sequence 7.
+2020-06-13 23:57:03,173 - discord.client - DEBUG - Dispatching event socket_raw_send
+2020-06-13 23:57:03,281 - discord.client - DEBUG - Dispatching event socket_raw_receive
+2020-06-13 23:57:03,282 - discord.gateway - DEBUG - For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-13 23:57:03,283 - discord.client - DEBUG - Dispatching event socket_response
+2020-06-13 23:57:44,424 - discord.gateway - DEBUG - Keeping websocket alive with sequence 7.
+2020-06-13 23:57:44,427 - discord.client - DEBUG - Dispatching event socket_raw_send
+2020-06-13 23:57:44,539 - discord.client - DEBUG - Dispatching event socket_raw_receive
+2020-06-13 23:57:44,541 - discord.gateway - DEBUG - For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-13 23:57:44,541 - discord.client - DEBUG - Dispatching event socket_response
+2020-06-13 23:58:25,681 - discord.gateway - DEBUG - Keeping websocket alive with sequence 7.
+2020-06-13 23:58:25,683 - discord.client - DEBUG - Dispatching event socket_raw_send
+2020-06-13 23:58:25,797 - discord.client - DEBUG - Dispatching event socket_raw_receive
+2020-06-13 23:58:25,799 - discord.gateway - DEBUG - For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-13 23:58:25,800 - discord.client - DEBUG - Dispatching event socket_response
+2020-06-13 23:59:06,936 - discord.gateway - DEBUG - Keeping websocket alive with sequence 7.
+2020-06-13 23:59:06,939 - discord.client - DEBUG - Dispatching event socket_raw_send
+2020-06-13 23:59:07,050 - discord.client - DEBUG - Dispatching event socket_raw_receive
+2020-06-13 23:59:07,051 - discord.gateway - DEBUG - For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-13 23:59:07,052 - discord.client - DEBUG - Dispatching event socket_response
+2020-06-13 23:59:48,193 - discord.gateway - DEBUG - Keeping websocket alive with sequence 7.
+2020-06-13 23:59:48,196 - discord.client - DEBUG - Dispatching event socket_raw_send
+2020-06-13 23:59:48,338 - discord.client - DEBUG - Dispatching event socket_raw_receive
+2020-06-13 23:59:48,340 - discord.gateway - DEBUG - For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-13 23:59:48,341 - discord.client - DEBUG - Dispatching event socket_response
+2020-06-14 00:00:29,448 - discord.gateway - DEBUG - Keeping websocket alive with sequence 7.
+2020-06-14 00:00:29,455 - discord.client - DEBUG - Dispatching event socket_raw_send
+2020-06-14 00:00:29,577 - discord.client - DEBUG - Dispatching event socket_raw_receive
+2020-06-14 00:00:29,578 - discord.gateway - DEBUG - For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-14 00:00:29,578 - discord.client - DEBUG - Dispatching event socket_response

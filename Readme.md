@@ -26,7 +26,7 @@ Hello, The aim of this project is to be able to provide useful sub-groups (Dubbe
 *class* Party(partySize ,role , owner)  <br>
 Represents a party. Init on ['?cParty'](#cParty)
 
-### partySize
+<h5>party.</h5><h3> partySize </h3>
 **Type**  int  <br>
 This shows the party's Max size.  Set on Init
 ### role
