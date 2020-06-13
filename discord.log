@@ -4176,3 +4176,27 @@ aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host discordap
 2020-06-13 17:13:33,008 - discord.gateway - DEBUG - For Shard ID None: WebSocket Event: {'t': 'PRESENCE_UPDATE', 's': 11, 'op': 0, 'd': {'user': {'id': '240573182711431168'}, 'status': 'idle', 'roles': ['570015187193692173', '698139700140965959'], 'premium_since': None, 'nick': None, 'guild_id': '435468279943790593', 'game': {'type': 4, 'state': 'drarry trash', 'name': 'Custom Status', 'id': 'custom', 'created_at': 1592064812922}, 'client_status': {'desktop': 'idle'}, 'activities': [{'type': 4, 'state': 'drarry trash', 'name': 'Custom Status', 'id': 'custom', 'created_at': 1592064812922}]}}
 2020-06-13 17:13:33,009 - discord.client - DEBUG - Dispatching event socket_response
 2020-06-13 17:13:33,009 - discord.client - DEBUG - Dispatching event member_update
+2020-06-13 17:13:59,953 - discord.gateway - DEBUG - Keeping websocket alive with sequence 11.
+2020-06-13 17:13:59,956 - discord.client - DEBUG - Dispatching event socket_raw_send
+2020-06-13 17:14:00,077 - discord.client - DEBUG - Dispatching event socket_raw_receive
+2020-06-13 17:14:00,077 - discord.gateway - DEBUG - For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-13 17:14:00,078 - discord.client - DEBUG - Dispatching event socket_response
+2020-06-13 17:14:41,208 - discord.gateway - DEBUG - Keeping websocket alive with sequence 11.
+2020-06-13 17:14:41,209 - discord.client - DEBUG - Dispatching event socket_raw_send
+2020-06-13 17:14:41,319 - discord.client - DEBUG - Dispatching event socket_raw_receive
+2020-06-13 17:14:41,321 - discord.gateway - DEBUG - For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-13 17:14:41,322 - discord.client - DEBUG - Dispatching event socket_response
+2020-06-13 17:15:22,462 - discord.gateway - DEBUG - Keeping websocket alive with sequence 11.
+2020-06-13 17:15:22,466 - discord.client - DEBUG - Dispatching event socket_raw_send
+2020-06-13 17:15:22,574 - discord.client - DEBUG - Dispatching event socket_raw_receive
+2020-06-13 17:15:22,575 - discord.gateway - DEBUG - For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-13 17:15:22,575 - discord.client - DEBUG - Dispatching event socket_response
+2020-06-13 17:15:54,021 - discord.client - DEBUG - Dispatching event socket_raw_receive
+2020-06-13 17:15:54,022 - discord.gateway - DEBUG - For Shard ID None: WebSocket Event: {'t': 'PRESENCE_UPDATE', 's': 12, 'op': 0, 'd': {'user': {'id': '240573182711431168'}, 'status': 'offline', 'roles': ['570015187193692173', '698139700140965959'], 'premium_since': None, 'nick': None, 'guild_id': '435468279943790593', 'game': None, 'client_status': {}, 'activities': []}}
+2020-06-13 17:15:54,023 - discord.client - DEBUG - Dispatching event socket_response
+2020-06-13 17:15:54,023 - discord.client - DEBUG - Dispatching event member_update
+2020-06-13 17:16:03,718 - discord.gateway - DEBUG - Keeping websocket alive with sequence 12.
+2020-06-13 17:16:03,722 - discord.client - DEBUG - Dispatching event socket_raw_send
+2020-06-13 17:16:03,839 - discord.client - DEBUG - Dispatching event socket_raw_receive
+2020-06-13 17:16:03,839 - discord.gateway - DEBUG - For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2020-06-13 17:16:03,840 - discord.client - DEBUG - Dispatching event socket_response

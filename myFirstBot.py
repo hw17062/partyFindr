@@ -143,8 +143,11 @@ async def disbandParty(ctx,*, partyName:str):
     try:
         i = findIndexOfParty(ctx.guild.id, partyName)
         if i >= 0:
-            await partyList[ctx.guild.id][i].role.delete(reason = "Party disbanded")
-            await ctx.send("Party Disbanded!")
+            if partyList[ctx.guild.id][i].owner == ctx.author.name
+                await partyList[ctx.guild.id][i].role.delete(reason = "Party disbanded")
+                await ctx.send("Party Disbanded!")
+            else:
+                await ctx.send("Premission denied. You must be the leader in order to disband a party")
         else:
             await ctx.send("I could not find the party requested")
 
