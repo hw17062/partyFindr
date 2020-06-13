@@ -24,7 +24,8 @@ Hello, The aim of this project is to be able to provide useful sub-groups (Dubbe
 Here I will describe the comands for the Bot. The Defult command_Prefix is '?'. This is currently uneditable.
 
 ### ?cParty <a name = "cParty"></a>
-*Command* '?cParty {partySize} "{partyName}" "{Description}" *{mentions}' 
+*Command*</t> '?cParty {partySize} "{partyName}" "{Description}" *{mentions}'
+
 cParty will create the party, setting the athor as the owner. It will create a new role on the server named "Party:{partyName}" , add this role on the author. Then, it will create an 'Ad' for the party with an Embed message. If someone invited :Thumbs Up: reaction the ad, they will join the party.<br>
 This ad will be updated upon members joining and leaving, and will be removed when the party is full.
 
@@ -44,6 +45,7 @@ This command will list all members in a party with the name "partyName". This wi
 
 ### ?leaveParty
 *Command* '?leaveParty "{partyName}" '
+
 This command will remove you from the party with the given name, should you be in this party.
 If the leader leaves, a new leader is assigned. If a party becomes empty, it will automatically be disbanded.
 
@@ -54,6 +56,7 @@ If the leader leaves, a new leader is assigned. If a party becomes empty, it wil
 
 ### ?disbandParty
 *Command* '?disbandParty "{partyName}"
+
 If you are the leader of a party, this command will delete the party from the role list.
 
 #### Example
@@ -63,6 +66,7 @@ If you are the leader of a party, this command will delete the party from the ro
 
 ### ?inviteMembers
 *Command* '?inviteMembers "{partyName}" *{mentions} '
+
 If you are the leader, this command will update the party Ad Message allowing the members you mention to join the party should they wish.
 
 #### Example
