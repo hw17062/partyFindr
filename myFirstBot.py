@@ -5,7 +5,6 @@ from classes.party import Party
 import sys
 import os
 from dotenv import load_dotenv
-import datetime
 import asyncio
 load_dotenv()
 
@@ -49,7 +48,7 @@ async def on_ready():
 
 # This command will create a party oject with the caller as the owner
 @bot.command()
-async def cParty(ctx, pSize:int, name:str, description:str, *, invitees):
+async def cParty(ctx, pSize:int, name:str, description:str, * invitees):
     # ctx.author passes a user object for private channels which has a different
     # name for the user's nickname.
     # Nonprivate passes a user
@@ -69,46 +68,21 @@ async def cParty(ctx, pSize:int, name:str, description:str, *, invitees):
     # a key in the dict yet, so add one then add the party
     try:
         partyList[ctx.guild.id].append(Party(pSize, newRole, authorNick))
+        party = partyList[ctx.guild.id][-1]
     except KeyError:
         partyList[ctx.guild.id] = []
         partyList[ctx.guild.id].append(Party(pSize, newRole, authorNick))
+        party = partyList[ctx.guild.id][-1]
 
     # Lastly, create an embed of the party to advertise/invite members
-    await embedInvites(ctx, name, description)
-
-# This will set up an Embed message that will advertice the party as well as showing who is invited
-async def embedInvites(ctx, partyName, description):
-    index = findIndexOfParty(ctx.guild.id, partyName)
-    thisParty = partyList[ctx.guild.id][index]
-    mentions = []
-    membersAsString = ""
-    mentionsAsString = ""
-    if not(ctx.message.mention_everyone):
-        mentions = ctx.message.mentions
-        mentionsAsString = ", ".join([user.mention for user in mentions])
-        thisParty.addInvited(mentions)
+    if ctx.message.mention_everyone or len(ctx.message.mentions) == 0:
+        party.makeOpen()
     else:
-        thisParty.openParty = True
-        mentionsAsString = "Open Party"
+        party.addInvited(ctx.message.mentions)
 
-    membersAsString = ", ".join([mem.name for mem in thisParty.role.members])
-    partySizeString = "{0} / {1}".format(len(thisParty.role.members), thisParty.partySize)
-    # create embed object
-    eInvMes = discord.Embed(title=partyName,
-                            timestamp= datetime.datetime.utcnow(),
-                            color=discord.Colour.from_rgb(78, 255, 33),
-                            description= description)
+    Ad = party.makeAd()
 
-    eInvMes.add_field(name="Owner", value=ctx.author.name, inline=False)
-    eInvMes.add_field(name="members", value=membersAsString, inline=True)
-    eInvMes.add_field(name="Invited", value=mentionsAsString, inline=True)
-    eInvMes.add_field(name="party size", value=partySizeString , inline=True)
-    eInvMes.add_field(name="How to Join", value=" react with a 👍 to join the party!" , inline=False)
-
-    message = await ctx.send(embed=eInvMes)
-
-    thisParty.inviteMessage = message
-
+    party.linkAd(await ctx.send(embed=eInvMes))
 
 # This command lists the parties members of a given party if the author is part of the party
 @bot.command()
@@ -199,7 +173,21 @@ async def disbandParty(ctx, partyName:str):
 @bot.command()
 async def inviteMembers(ctx, partyName:str, *, mentions):
     index = findIndexOfParty(ctx.guild.id, partyName)
-    partyList[ctx.guild.id][index].addInvited(ctx.message.mentions)
+    if index == -1: # check if we have a record of this party
+        await ctx.send("I could not find this party, please check the spelling")
+        return
+
+    party = partyList[ctx.guild.id][index]
+    # Only allow leader to send invites
+    if ctx.author.name == party.owner:
+        # Make it an open party if @everyone or @here was inc.
+        if ctx.message.mention_everyone:
+            party.makeOpen()
+        else:
+            await party.addInvited(ctx.message.mentions)
+            await ctx.send("Party updated")
+    else:
+        await ctx.send("Only the party leader has permission to invite new members")
 
 
 # # Checks for a thumbs up emoji on a party ad to join the party
