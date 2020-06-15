@@ -11,7 +11,7 @@ class Party():
         self.partySize = pSize
         self.role = role
         self.owner = owner
-        self.invitedMembers = []
+        self.invitedMembers = []    # list of discord.member
         self.advertMessage =[]  # Will be of type discord.message
         self.openParty = False
 
@@ -32,13 +32,28 @@ class Party():
     # then update the Party Ad
     def addInvited(self, members):
         # extend the invitedMembers var
-        self.invitedMembers.extend([mem.name for mem in members])
+        self.invitedMembers.extend(members)
+        self.makeClose()
 
     def makeOpen(self):
         self.openParty = True
 
-    def makeClose():
+    def makeClose(self):
         self.openParty = False
+
+
+    async def updateAd(self):
+        ad = await self.makeAd()
+
+        for msg in self.advertMessage:
+            await msg.edit(embed = ad)
+
+    def linkAd(self, message):
+        self.advertMessage.append(message)
+
+    def deleteAds(self):
+        for msg in self.advertMessage:
+            msg.delete()
 
     # This function will return a Discord.Embed object for the Ad of the Party
     async def makeAd(self):
@@ -46,12 +61,10 @@ class Party():
         if self.openParty:
             mentionsAsString = "Open Party"
         else:
-            mentionsAsString = ", ".join(self.invitedMembers)
+            mentionsAsString = ", ".join([mem.mention for mem in self.invitedMembers])
 
         membersAsString = ", ".join([mem.name for mem in self.role.members])
-        print("---------- New Role -------------")
-        print([mem.name for mem in self.role.members])
-        print(membersAsString)
+
         partySizeString = "{0} / {1}".format(len(self.role.members), self.partySize)
         # create embed object
         eInvMes = discord.Embed(title=self.name,
@@ -66,16 +79,3 @@ class Party():
         eInvMes.add_field(name="How to Join", value=" react with a 👍 to join the party!" , inline=False)
 
         return eInvMes
-
-    def updateAd(self):
-        ad = self.makeAd()
-
-        for msg in self.advertMessage:
-            msg.edit(embed = ad)
-
-    def linkAd(self, message):
-        self.advertMessage.append(message)
-
-    def deleteAds(self):
-        for msg in self.advertMessage:
-            msg.delete()

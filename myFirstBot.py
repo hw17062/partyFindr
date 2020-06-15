@@ -79,6 +79,7 @@ async def cParty(ctx, pSize:int, name:str, description:str, * invitees):
         party.makeOpen()
     else:
         party.addInvited(ctx.message.mentions)
+        party.makeClose()
 
 
     # Some times the role does not update, so sleep for a second before posting the
@@ -176,8 +177,9 @@ async def disbandParty(ctx, partyName:str):
     except discord.errors.HTTPException:
         await ctx.send("Could not remove you from the party. possible reasons: Incorrect Name, this party has been disbanded")
 
+# Command to allow the leader to add players to the invite lise/make it an open party
 @bot.command()
-async def inviteMembers(ctx, partyName:str, *, mentions):
+async def invite(ctx, partyName:str, *, mentions):
     index = findIndexOfParty(ctx.guild.id, partyName)
     if index == -1: # check if we have a record of this party
         await ctx.send("I could not find this party, please check the spelling")
@@ -190,9 +192,9 @@ async def inviteMembers(ctx, partyName:str, *, mentions):
         if ctx.message.mention_everyone:
             party.makeOpen()
         else:
-            await party.addInvited(ctx.message.mentions)
+            party.addInvited(ctx.message.mentions)
 
-        party.updateAd()
+        await party.updateAd()
         await ctx.send("Party updated")
     else:
         await ctx.send("Only the party leader has permission to invite new members")
