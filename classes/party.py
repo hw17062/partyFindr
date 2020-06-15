@@ -1,15 +1,18 @@
 # This class holds the info of a party for the discord bot, from here it can
 # set a new leader
 
+import discord  # Import the relevent discord Framework
 import datetime
 
 class Party():
-    def __init__(self,pSize:int, role,owner:str):
+    def __init__(self,pSize:int, role,owner:str, name:str, desc:str):
+        self.description = desc
+        self.name = name
         self.partySize = pSize
         self.role = role
         self.owner = owner
         self.invitedMembers = []
-        self.inviteMessage =''  # Will be of type discord.message
+        self.advertMessage =[]  # Will be of type discord.message
         self.openParty = False
 
     def promoteOwner(self, newLeader):
@@ -27,20 +30,18 @@ class Party():
 
     # get a list of Discord.Member ojbects to add to the invite lists
     # then update the Party Ad
-    async def addInvited(self, members):
+    def addInvited(self, members):
         # extend the invitedMembers var
         self.invitedMembers.extend([mem.name for mem in members])
-        embed = discord.Embed()
 
-    def makeOpen():
+    def makeOpen(self):
         self.openParty = True
 
     def makeClose():
         self.openParty = False
 
     # This function will return a Discord.Embed object for the Ad of the Party
-    async def makeAd():
-        membersAsString = ""
+    async def makeAd(self):
         mentionsAsString = ""
         if self.openParty:
             mentionsAsString = "Open Party"
@@ -48,12 +49,15 @@ class Party():
             mentionsAsString = ", ".join(self.invitedMembers)
 
         membersAsString = ", ".join([mem.name for mem in self.role.members])
+        print("---------- New Role -------------")
+        print([mem.name for mem in self.role.members])
+        print(membersAsString)
         partySizeString = "{0} / {1}".format(len(self.role.members), self.partySize)
         # create embed object
-        eInvMes = discord.Embed(title=partyName,
+        eInvMes = discord.Embed(title=self.name,
                                 timestamp= datetime.datetime.utcnow(),
                                 color=discord.Colour.from_rgb(78, 255, 33),
-                                description= description)
+                                description= self.description)
 
         eInvMes.add_field(name="Owner", value=self.owner, inline=False)
         eInvMes.add_field(name="members", value=membersAsString, inline=True)
@@ -63,5 +67,15 @@ class Party():
 
         return eInvMes
 
+    def updateAd(self):
+        ad = self.makeAd()
+
+        for msg in self.advertMessage:
+            msg.edit(embed = ad)
+
     def linkAd(self, message):
-        self.inviteMessage = message
+        self.advertMessage.append(message)
+
+    def deleteAds(self):
+        for msg in self.advertMessage:
+            msg.delete()

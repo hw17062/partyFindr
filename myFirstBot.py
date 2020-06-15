@@ -67,11 +67,11 @@ async def cParty(ctx, pSize:int, name:str, description:str, * invitees):
     # If this fails then catch a Key error, this means the guild has not got
     # a key in the dict yet, so add one then add the party
     try:
-        partyList[ctx.guild.id].append(Party(pSize, newRole, authorNick))
+        partyList[ctx.guild.id].append(Party(pSize, newRole, authorNick, name, description))
         party = partyList[ctx.guild.id][-1]
     except KeyError:
         partyList[ctx.guild.id] = []
-        partyList[ctx.guild.id].append(Party(pSize, newRole, authorNick))
+        partyList[ctx.guild.id].append(Party(pSize, newRole, authorNick, name, description))
         party = partyList[ctx.guild.id][-1]
 
     # Lastly, create an embed of the party to advertise/invite members
@@ -80,9 +80,13 @@ async def cParty(ctx, pSize:int, name:str, description:str, * invitees):
     else:
         party.addInvited(ctx.message.mentions)
 
-    Ad = party.makeAd()
 
-    party.linkAd(await ctx.send(embed=eInvMes))
+    # Some times the role does not update, so sleep for a second before posting the
+    # Ad to avoid errors. I hate this, but asynio.wait_for was not working as expected here
+    await asyncio.sleep(1)
+    Ad = await party.makeAd()
+
+    party.linkAd(await ctx.send(embed=Ad))
 
 # This command lists the parties members of a given party if the author is part of the party
 @bot.command()
@@ -161,6 +165,8 @@ async def disbandParty(ctx, partyName:str):
         if i >= 0:
             if partyList[ctx.guild.id][i].owner == ctx.author.name:
                 await partyList[ctx.guild.id][i].role.delete(reason = "Party disbanded")
+                partyList[ctx.guild.id][i].deleteAds()
+                del partyList[ctx.guild.id][i]
                 await ctx.send("Party Disbanded!")
             else:
                 await ctx.send("Premission denied. You must be the leader in order to disband a party")
@@ -185,10 +191,20 @@ async def inviteMembers(ctx, partyName:str, *, mentions):
             party.makeOpen()
         else:
             await party.addInvited(ctx.message.mentions)
-            await ctx.send("Party updated")
+
+        party.updateAd()
+        await ctx.send("Party updated")
     else:
         await ctx.send("Only the party leader has permission to invite new members")
 
+# currently used during testing for when I create a lot of roles
+@bot.command()
+async def clearParties(ctx):
+    roles = ctx.guild.roles
+
+    for role in roles:
+        if role.name[:6] == "party:":
+            await role.delete()
 
 # # Checks for a thumbs up emoji on a party ad to join the party
 # @client.event
