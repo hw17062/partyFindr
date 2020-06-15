@@ -12,7 +12,7 @@ class Party():
         self.role = role
         self.owner = owner
         self.invitedMembers = []    # list of discord.member
-        self.advertMessage =[]  # Will be of type discord.message
+        self.advertMessage =[]  # Will be of type discord.message, list of all locations of the Ad
         self.openParty = False
 
     def promoteOwner(self, newLeader):
@@ -76,6 +76,6 @@ class Party():
         eInvMes.add_field(name="members", value=membersAsString, inline=True)
         eInvMes.add_field(name="Invited", value=mentionsAsString, inline=True)
         eInvMes.add_field(name="party size", value=partySizeString , inline=True)
-        eInvMes.add_field(name="How to Join", value=" react with a 👍 to join the party!" , inline=False)
+        eInvMes.add_field(name="How to Join", value="react with a 👍 to join the party!" , inline=False)
 
         return eInvMes

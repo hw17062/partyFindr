@@ -3,9 +3,11 @@ import logging  # Use Py's logging module to track errors
 from discord.ext import commands
 from classes.party import Party
 import sys
+import codecs
 import os
 from dotenv import load_dotenv
 import asyncio
+os.environ['PYTHONIOENCODING']='utf-8'
 load_dotenv()
 
 BOT_KEY = os.getenv("BOT_KEY")
@@ -195,7 +197,7 @@ async def invite(ctx, partyName:str, *, mentions):
             party.addInvited(ctx.message.mentions)
 
         await party.updateAd()
-        await ctx.send("Party updated")
+        await ctx.send(party.name, " updated")
     else:
         await ctx.send("Only the party leader has permission to invite new members")
 
@@ -208,17 +210,53 @@ async def clearParties(ctx):
         if role.name[:6] == "party:":
             await role.delete()
 
-# # Checks for a thumbs up emoji on a party ad to join the party
-# @client.event
-# async def on_reaction_add(reaction, user):
-#     if not reaction.me:
-#         if reaction.emoji == "\N{THUMBS UP SIGN}":
-#             await
+# This loops through all the parties in a server and checks if the give msgID matchs any of the party Ads,
+# then returns the index of the party if found, else return -1
+def scanForAd(msgId, guildID):
+    # See if the reation is in a party Ad
+    for i in range(len(partyList[guildID])):
+        partyAds = partyList[reaction.message.guild.id][i].advertMessage
+        for msg in partyAds:
+            if msg.id == reactedMessage.id:
+                return i
+    return -1
 
 
-            # messageID = reaction.message.id
+# Checks for a thumbs up emoji on a party ad to join the party
+@bot.event
+async def on_reaction_add(reaction, user):
+    if not reaction.me:
+        if reaction.emoji == "\N{THUMBS UP SIGN}":
+            reactedMessage = reaction.message
+            guildID =reactedMessage.guild.id
+            partyIndex = scanForAd(reactedMessage.id, guildID)
 
-            # for i in range(len(partyList[reaction.message.guild.id]))
+            if partyIndex >= 0: # Check party is found
+                party = partyList[reaction.message.guild.id][i]
+                if user in party.invitedMembers:    ## If user is invited, add them
+                    await user.add_roles(party.role)
+                    party.invitedMembers.remove(user)
+                    await asynio.sleep(1)
+                    await party.updateAd()
+                if user in party.roles.members:
+                    await reaction.message.channel.send( user.mention, " You are already part of the party!")
+                    await reaction.clear()
+                else:
+                    await reaction.message.channel.send(user.mention, " You are already part of the party!")
+                    await reaction.clear()
+        elif reaction.emoji == "\N{THUMBS DOWN SIGN}":
+            reactedMessage = reaction.message
+            guildID =reactedMessage.guild.id
+            partyIndex = scanForAd(reactedMessage.id, guildID)
+
+            if partyIndex >= 0: # Check party is found
+                party = partyList[reaction.message.guild.id][i]
+                if user in party.invitedMembers:    # If user is invited, remove them them
+                    party.invitedMembers.remove(user)
+                    await party.updateAd()
+                    await reaction.clear()
 
 
-bot.run(BOT_KEY)
+
+
+bot.run("NzE4MjE1NzQ5OTEwMzk2OTYw.Xud2YA.k4qDjHENj0viBMAorJRsWGAYqeI")
