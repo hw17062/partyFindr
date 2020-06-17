@@ -197,7 +197,7 @@ async def invite(ctx, partyName:str, *, mentions):
             party.addInvited(ctx.message.mentions)
 
         await party.updateAd()
-        await ctx.send(party.name, " updated")
+        await ctx.send(party.name + " updated")
     else:
         await ctx.send("Only the party leader has permission to invite new members")
 
@@ -210,14 +210,32 @@ async def clearParties(ctx):
         if role.name[:6] == "party:":
             await role.delete()
 
+# this command allows a user to post the Ad for the party in another channel. It Will
+# also accepts mentions as invites for the case of different people allowed in different channels
+@bot.command()
+async def postAd(ctx, partyName:str, *, mentions):
+    if len(ctx.message.mentions) > 0:
+        await invite(ctx, partyName, mentions)
+    else:
+        index = findIndexOfParty(ctx.guild.id, partyName)
+        if index == -1: # check if we have a record of this party
+            await ctx.send("I could not find this party, please check the spelling")
+            return
+
+        partyList[ctx.guild.id][index].updateAd()
+
+
+#-------------------------------------------------------------------------------
+#                               EVENTS
+
 # This loops through all the parties in a server and checks if the give msgID matchs any of the party Ads,
 # then returns the index of the party if found, else return -1
 def scanForAd(msgId, guildID):
     # See if the reation is in a party Ad
     for i in range(len(partyList[guildID])):
-        partyAds = partyList[reaction.message.guild.id][i].advertMessage
+        partyAds = partyList[guildID][i].advertMessage
         for msg in partyAds:
-            if msg.id == reactedMessage.id:
+            if msg.id == msgId:
                 return i
     return -1
 
@@ -232,17 +250,17 @@ async def on_reaction_add(reaction, user):
             partyIndex = scanForAd(reactedMessage.id, guildID)
 
             if partyIndex >= 0: # Check party is found
-                party = partyList[reaction.message.guild.id][i]
-                if user in party.invitedMembers:    ## If user is invited, add them
+                party = partyList[reaction.message.guild.id][partyIndex]
+                if user in party.role.members:    # If user is invited, add them
+                    await reaction.message.channel.send( user.mention + " You are already part of the party!")
+                    await reaction.clear()
+                elif user in party.invitedMembers:
                     await user.add_roles(party.role)
                     party.invitedMembers.remove(user)
-                    await asynio.sleep(1)
+                    await asyncio.sleep(1)
                     await party.updateAd()
-                if user in party.roles.members:
-                    await reaction.message.channel.send( user.mention, " You are already part of the party!")
-                    await reaction.clear()
                 else:
-                    await reaction.message.channel.send(user.mention, " You are already part of the party!")
+                    await reaction.message.channel.send(user.mention + " You are already part of the party!")
                     await reaction.clear()
         elif reaction.emoji == "\N{THUMBS DOWN SIGN}":
             reactedMessage = reaction.message
@@ -250,7 +268,7 @@ async def on_reaction_add(reaction, user):
             partyIndex = scanForAd(reactedMessage.id, guildID)
 
             if partyIndex >= 0: # Check party is found
-                party = partyList[reaction.message.guild.id][i]
+                party = partyList[reaction.message.guild.id][partyIndex]
                 if user in party.invitedMembers:    # If user is invited, remove them them
                     party.invitedMembers.remove(user)
                     await party.updateAd()
@@ -259,4 +277,6 @@ async def on_reaction_add(reaction, user):
 
 
 
-bot.run("NzE4MjE1NzQ5OTEwMzk2OTYw.Xud2YA.k4qDjHENj0viBMAorJRsWGAYqeI")
+
+
+bot.run(BOT_KEY)

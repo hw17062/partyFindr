@@ -32,7 +32,9 @@ class Party():
     # then update the Party Ad
     def addInvited(self, members):
         # extend the invitedMembers var
-        self.invitedMembers.extend(members)
+        for mem in members:
+            if not (mem in self.role.members):
+                self.invitedMembers.extend(members)
         self.makeClose()
 
     def makeOpen(self):
@@ -57,11 +59,12 @@ class Party():
 
     # This function will return a Discord.Embed object for the Ad of the Party
     async def makeAd(self):
-        mentionsAsString = ""
-        if self.openParty:
-            mentionsAsString = "Open Party"
-        else:
-            mentionsAsString = ", ".join([mem.mention for mem in self.invitedMembers])
+        mentionsAsString = "Open Party"
+        if not self.openParty:
+            if len(self.invitedMembers) > 0:
+                mentionsAsString = ", ".join([mem.mention for mem in self.invitedMembers])
+            else:
+                mentionsAsString = "empty"
 
         membersAsString = ", ".join([mem.name for mem in self.role.members])
 
