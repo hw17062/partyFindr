@@ -92,6 +92,7 @@ This lists the functions class on events.
 
 #### Thumbs Up reaction
 This reaction will add a user to the party if reacted on an Ad.
+
 On a thumbs up, the bot will check if the reacted message is from the list of parties' Ads. If so, check if the user is eligible to join, if so, they are added to the party.
 
 #### Thumbs Down reaction
@@ -143,6 +144,7 @@ Holds wether the party is open to everyone in it's channel's origins or is invit
 
 #### promoteOwner
 *party.promoteOwner(self, newLeader)*
+
 **newLeader** - Str, name of user being promoted
 This will see if the new user is in the party, if they are, they are set as [Party.owner](#Owner)
 
@@ -150,10 +152,12 @@ This will see if the new user is in the party, if they are, they are set as [Par
 
 #### isFull
 *party.promoteOwner(self)*
+
 **returns** bool ? is party full
 
 #### addInvited
 *party.addInvited(self, members)*
+
 **members** = list[Discord.Member]
 loops through members, adding them to Party.Role.members
 
@@ -178,6 +182,6 @@ This will add the passes message object to the list of advertMessage, allowing t
 *party.updateAd (self)*
 This method will create an new version of the Embed Ad and edit all linked copies.
 
-### deleteAds
+#### deleteAds
 *party.deleteAds (self)*
 This method will go through and delete all linked Ad messages.
